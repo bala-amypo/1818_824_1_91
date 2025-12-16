@@ -1,2 +1,4 @@
 package com.demo.model
-class User
+public class User{
+
+}
