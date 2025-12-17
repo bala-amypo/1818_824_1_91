@@ -7,7 +7,6 @@ public class category{
     private String description;
     private String defaultUrgency;
     private String createdAt;
-    private String createdAt;
     public Long getId(Long id){
         return id;
     }
@@ -26,7 +25,13 @@ public class category{
     public void setDescription(){
         this.description=description;
     }
-    public void getDefaultUrgency(String DefaultUrgency){
+    public String getDefaultUrgency(String defaultUrgency){
+        return defaultUrgency;
+    }
+    public void setDefaultUrgency(){
         this.defaultUrgency=defaultUrgency;
+    }
+    public String getDefaultUrgency(String createdAt){
+
     }
 }
