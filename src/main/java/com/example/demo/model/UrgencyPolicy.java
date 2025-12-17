@@ -31,10 +31,10 @@ public class UrgencyPolicy{
     public void setMatchType(String matchType){
         this.matchType=matchType;
     }
-    public String getPriority(){
+    public Long getPriority(){
         return priority;
     }
-    public void setPriority(String priority){
+    public void setPriority(Long priority){
         this.priority=priority;
     }
     public void setCreatedAt(Timestamp createdAt){
