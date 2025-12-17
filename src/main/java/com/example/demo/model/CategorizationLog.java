@@ -1,7 +1,9 @@
 package com.example.demo.model;
 import org.hibernate.annotations.CreationTimestamp;
 import java.sql.Timestamp;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+@Entity
 class CategorizationLog{
     @Id
     private Long id;
