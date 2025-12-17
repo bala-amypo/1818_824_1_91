@@ -2,7 +2,7 @@ package com.example.demo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
-import j
+import java.sql.Timestamp;
 @Entity
 public class UrgencyPolicy{
     @Id
@@ -11,7 +11,8 @@ public class UrgencyPolicy{
     private String keyword;
     private String matchType;
     private Long priority;
-    private  createdAt;
+    @CreationTimestamp
+    private Timestamp createdAt;
     public Long getId(){
         return id;
     }
@@ -36,10 +37,19 @@ public class UrgencyPolicy{
     public void setPriority(String priority){
         this.priority=priority;
     }
-    public void setCreatedAt(String createdAt){
+    public void setCreatedAt(Timestamp createdAt){
         this.createdAt=createdAt
     }
-    public String getCreatedAt(){
+    public Timestamp getCreatedAt(){
         return createdAt;
+    }
+    public void setKeyword(String keyword){
+        this.keyword=keyword;
+    }
+    public String getKeyWord(){
+        return keyword;
+    }
+    public UrgencyPolicy(L){
+
     }
 }
