@@ -1,6 +1,7 @@
 package com.example.demo.model;
 import java.util.Timestamp;
-package org.hibernate.annotations.Timestamp;
+import org.hibernate.annotations.CreationTimestamp;
+import java.sql.Timestamp;
 class CategorizationLog{
     private Long id;
     private String ticket;
@@ -40,10 +41,10 @@ class CategorizationLog{
     public void setAppliedRule(String appliedRule){
         this.appliedRule=appliedRule;
     }
-    private void setMatchedKeyword(String matchedKeyword){
+    public void setMatchedKeyword(String matchedKeyword){
         this.matchedKeyword=matchedKeyword;
     }
-    private void setAssignedCategory(String assignedCategory){
+    public void setAssignedCategory(String assignedCategory){
         this.assignedCategory=assignedCategory;
     }
     public void setAssignedUrgency(String assignedUrgency){
