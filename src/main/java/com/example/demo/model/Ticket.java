@@ -2,6 +2,7 @@ package com.example.demo.model;
 import jakarta.persistance.Entity;
 @Entity
 public class Ticket{
+    
     private Long id;
     private String fullName;
     private String loaction;
@@ -9,5 +10,7 @@ public class Ticket{
     private String createdAt;
     private String assignedCategory;
     private String urgencyLevel;
-    public getId()
+    public Long getId(){
+        return id;
+    }
 }
