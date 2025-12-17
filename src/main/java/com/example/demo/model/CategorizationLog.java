@@ -8,6 +8,12 @@ public class CategorizationLog{
     private String assignedCategory;
     private String assignedUrgency;
     private String loggedAt;
+    public void setId(Long id){
+        
+    }
+    public Long getId(){
+
+    }
     public void setTicket(String Ticket){
         this.Ticket=Ticket;
     }
