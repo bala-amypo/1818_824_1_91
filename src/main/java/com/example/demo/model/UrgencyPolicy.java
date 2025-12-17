@@ -33,11 +33,10 @@ public class UrgencyPolicy{
     public void setPriority(String priority){
         this.priority=priority;
     }
-    public String getPriority(){
-        return 
-    }
     public void setCreatedAt(String createdAt){
-        this.createdAt
+        this.createdAt=createdAt
     }
-    public 
+    public String getCreatedAt(){
+        return createdAt;
+    }
 }

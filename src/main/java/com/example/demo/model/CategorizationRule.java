@@ -39,4 +39,7 @@ class CategorizationRule{
     public String getCategory(){
         return getCategory;
     }
+    public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
+        
+    }
 }
