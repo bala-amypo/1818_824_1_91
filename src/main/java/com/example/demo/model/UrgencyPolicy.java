@@ -38,7 +38,7 @@ public class UrgencyPolicy{
         this.priority=priority;
     }
     public void setCreatedAt(Timestamp createdAt){
-        this.createdAt=createdAt
+        this.createdAt=createdAt;
     }
     public Timestamp getCreatedAt(){
         return createdAt;
@@ -49,7 +49,13 @@ public class UrgencyPolicy{
     public String getKeyWord(){
         return keyword;
     }
-    public UrgencyPolicy(L){
-
+    public UrgencyPolicy(Long id,String category,String keyword,String matchType,Long priority,Timestamp createdAt){
+        this.id=id;
+        this.category=category;
+        this.keyword=keyword;
+        this.matchType=matchType;
+        this.priority=priority;
+        this.createdAt=createdAt;
     }
+    public UrgencyPolicy(){}
 }
