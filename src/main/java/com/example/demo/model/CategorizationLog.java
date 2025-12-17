@@ -24,28 +24,28 @@ public class CategorizationLog{
     public String setAppliedRule(String matchedKeyword){
         return appliedRule;
     }
-    public void getMatchedKeyword(){
-        this.matchedKeyword=matchedKeyword;
+    public String  getMatchedKeyword(String matchedKeyword){
+        return matchedKeyword;
     }
     public String setTicket(){
         return matchedKeyword;
     }
-    public void getAssignedCategory(String assignedCategory){
+    public void setAssignedCategory(String assignedCategory){
         this.assignedCategory=assignedCategory;
     }
-    public String setAssignedCategory(){
+    public String getAssignedCategory(){
         return assignedCtaegory;
     }
-    public void getAssignedUrgency(String assignedUrgency){
+    public void setAssignedUrgency(String assignedUrgency){
         this.assignedUrgency=assignedUrgency;
     }
-    public String setAssignedUrgency(){
+    public String getAssignedUrgency(){
         return assignedUrgency;
     }
-    public void getLoggedAt(String loggedAt){
+    public void setLoggedAt(String loggedAt){
         this.loggedAt=loggedAt;
     }
-    public String setLoggedAt(){
+    public String getLoggedAt(){
         return loggedAt;
     } 
 }
