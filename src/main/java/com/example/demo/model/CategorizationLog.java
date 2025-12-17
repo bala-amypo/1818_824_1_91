@@ -42,6 +42,5 @@ public class CategorizationLog{
     }
     public String setLoggedAt(String loggedAt){
         return loggedAt;
-    }
-    
+    } 
 }

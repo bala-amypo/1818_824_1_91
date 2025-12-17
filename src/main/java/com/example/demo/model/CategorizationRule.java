@@ -9,13 +9,31 @@ class CategorizationRule{
     public void setCategory(){
         this.category=category;
     }
-    public String getCategory(String GetCategory){
-        return getCategory;
+    public String getCategory(String category){
+        return category;
     }
     public void setKeyword(){
         this.keyword=category;
     }
-    public String getCategory(String GetCategory){
-        return getCategory;
+    public String getKeyword(String keyword){
+        return keyword;
+    }
+    public void setMatchType(){
+        this.matchType=matchType;
+    }
+    public String getCategory(String matchType){
+        return matchType;
     }  
+    public void getPriority(){
+        this.priority=priority
+    }
+    public int setPriority(int priority){
+        return priority
+    }
+    public void setCreatedAt(){
+        this.category=category
+    }
+    public String getCategory(String GetCategory){
+        return getCategory
+    } 
 }
