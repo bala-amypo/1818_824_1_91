@@ -1,7 +1,7 @@
 package com.example.demo.model;
-import jakarta.persistance.Entity;
+import jakarta.persistence.Entity;
 import java.sql.Timestamp;
-import jakarta.persistance.Id;
+import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 @Entity
 public class Category{
@@ -35,11 +35,8 @@ public class Category{
     public void setDefaultUrgency(String defaultUrgency){
         this.defaultUrgency=defaultUrgency;
     }
-    public Timestamp getTimestamp(){
-        return Timestamp;
-    }
-    public void setTimestamp(Timestamp createdAt){
-        this.createdAt=createdAt;
+    public Timestamp getcreatedAt(){
+        return createdAt;
     }
     public Category(Long id,String categoryName,String description,String defaultUrgency,Timestamp createdAt){
         this.id=id;
