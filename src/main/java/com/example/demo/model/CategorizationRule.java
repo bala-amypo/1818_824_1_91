@@ -1,5 +1,5 @@
 package com.example.demo.model;
-
+import 
 @Entity
 class CategorizationRule{
     @Id
@@ -40,6 +40,12 @@ class CategorizationRule{
         return getCategory;
     }
     public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
-        
+        this.id=id;
+        this.category=category;
+        this.keyword=keyword;
+        this matchType=matchType;
+        this priority=priority;
+        this.createdAt=createdAt;
     }
+    CategorizationRule st=new CategorizationRule();
 }
