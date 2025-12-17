@@ -2,7 +2,7 @@ package com.example.demo;
 
 @Entity
 class CategorizationRule{
-    private Long int;
+    private Long id;
     private String category;
     private String keyword;
     private String matchType;
@@ -27,15 +27,16 @@ class CategorizationRule{
         return matchType;
     }  
     public void getPriority(int priority){
-        this.priority=priority
+        this.priority=priority;
     }
     public int setPriority(){
-        return priority
+        return priority;
     }
     public void setCreatedAt(String GetCategory){
-        this.category=category
+        this.category=category;
     }
     public String getCategory(){
-        return getCategory
-    } 
+        return getCategory;
+    }
+    public void  
 }
