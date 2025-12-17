@@ -34,7 +34,7 @@ public class User{
     public void setId(Long id){
         this.id=id;
     }
-    public void setFullName(String fullname){
+    public void setFullName(String fullName){
         this.fullName=fullName;
     }
     public void setEmail(String email){
