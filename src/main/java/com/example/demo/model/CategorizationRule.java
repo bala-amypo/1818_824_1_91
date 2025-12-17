@@ -1,8 +1,10 @@
 package com.example.demo.model;
-import 
+import jakarata.persistance.Enrirty;
+import jakarata.presistance.Id;
 @Entity
 class CategorizationRule{
     @Id
+    @NotBlank("")
     private Long id;
     private String category;
     private String keyword;
@@ -47,5 +49,6 @@ class CategorizationRule{
         this priority=priority;
         this.createdAt=createdAt;
     }
+    public CategorizationRule(){}
     CategorizationRule st=new CategorizationRule();
 }
