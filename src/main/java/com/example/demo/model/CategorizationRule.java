@@ -1,4 +1,6 @@
-package com.example.demo
+package com.example.demo;
+
+@Entity
 class CategorizationRule{
     private Long int;
     private String category;
