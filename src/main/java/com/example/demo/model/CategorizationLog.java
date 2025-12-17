@@ -16,10 +16,10 @@ public class CategorizationLog{
     public void getAppliedRule(String Ticket){
         this.appliedRule=apppliedRule;
     }
-    public String setAppliedRule(){
+    public String setAppliedRule(String matchedKeyword){
         return appliedRule;
     }
-    public void getMatchedKeyword(){
+    public void getMatchedKeyword(String matchedKeyword){
         this.matchedKeyword=matchedKeyword;
     }
     public String setTicket(){
@@ -31,16 +31,16 @@ public class CategorizationLog{
     public String setAssignedCategory(){
         return assignedCtaegory;
     }
-    public void getAssignedUrgency(){
+    public void getAssignedUrgency(String assignedUrgency){
         this.assignedUrgency=assignedUrgency;
     }
-    public String setAssignedUrgency(String assignedUrgency){
+    public String setAssignedUrgency(){
         return assignedUrgency;
     }
-    public void getLoggedAt(){
+    public void getLoggedAt(String loggedAt){
         this.loggedAt=loggedAt;
     }
-    public String setLoggedAt(String loggedAt){
+    public String setLoggedAt(){
         return loggedAt;
     } 
 }
