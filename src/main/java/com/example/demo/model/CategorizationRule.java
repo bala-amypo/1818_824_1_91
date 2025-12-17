@@ -2,7 +2,10 @@ package com.example.demo.model;
 import jakarta.persistence.Entity;
 import jakarta.presistence.Id;
 import jakarta.persistence.PrePersist;
-import jakarta.persistance.
+import jakarta.persistence.GenrationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 @Entity
 class CategorizationRule{
     @Id
