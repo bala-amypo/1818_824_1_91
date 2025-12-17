@@ -4,10 +4,10 @@ import jakarta.presistance.Id;
 @Entity
 class CategorizationRule{
     @Id
-    @NotBlank("This Feild is Recquired")
-    @A
+    @GeneratedValue(stratergy=GenerationType.Identity)
     private Long id;
     private String category;
+    @NotNull(message="This Feild is Recquired")
     private String keyword;
     private String matchType;
     private int priority;
