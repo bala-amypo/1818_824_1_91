@@ -34,13 +34,25 @@ class CategorizationLog{
     public void SetId(Long id){
         this.id=id;
     }
-    public void ticket(String ticket){
+    public void setTicket(String ticket){
         this.ticket=ticket;
     }
-    public void appliedRule(){
-        
+    public void setAppliedRule(String appliedRule){
+        this.appliedRule=appliedRule;
+    }
+    private void setMatchedKeyword(String matchedKeyword){
+        this.matchedKeyword=matchedKeyword;
+    }
+    private void setAssignedCategory(String assignedCategory){
+        this.assignedCategory=assignedCategory;
+    }
+    public void setAssignedUrgency(String assignedUrgency){
+        this.assignedUrgency=assignedUrgency;
     }
     public CategorizationLog(Long id,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
-
+        this.id=id;
+        this.ticket=ticket;
+        this.appliedRule=appliedRule;
+        this.matched
     }
 }
