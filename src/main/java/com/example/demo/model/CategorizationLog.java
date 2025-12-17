@@ -1,6 +1,6 @@
 package com.example.demo.model;
 import java.util.Timestamp;
-package jakarta.
+package org.hibernate.annotations.Timestamp;
 class CategorizationLog{
     private Long id;
     private String ticket;
@@ -10,4 +10,5 @@ class CategorizationLog{
     private String assignedUrgency;
     @CreationTimestamp
     private Timestamp createdAt;
+    
 }
