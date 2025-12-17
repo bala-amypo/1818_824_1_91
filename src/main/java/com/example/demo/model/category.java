@@ -21,6 +21,12 @@ public class category{
         this.categoryName=categoryName;
     }
     public String getDescription(String description){
-        return descriptio
+        return description;
+    }
+    public void setDescription(){
+        this.description=description;
+    }
+    public void getDefaultUrgency(String DefaultUrgency){
+        this.defaultUrgency=defaultUrgency;
     }
 }
