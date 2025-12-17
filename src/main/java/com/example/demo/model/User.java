@@ -18,4 +18,26 @@ public class User{
     String getFullname(){
         return fullName;
     }
+    String getEmail(){
+        return email;
+    }
+    String getPassword(){
+        return password;
+    }
+    String getRole(){
+        return role;
+    }
+    TimeStamp getCreatedAt(){
+        return createdAt;
+    }
+    public void setId(Long id){
+        this.id=id;
+    }
+    public void setFullName(String fullname){
+        this.fullName=fullName;
+    }
+    public void setEmail(String Email){
+        this.email=email;
+    }
+    public void setPass
 }
