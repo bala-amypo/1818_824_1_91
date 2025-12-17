@@ -57,3 +57,5 @@ this.priority=priority;
 this.createdAt=createdAt;
 }
 public CategorizationRule(){}
+CategorizationRule st=new CategorizationRule();
+}
