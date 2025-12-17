@@ -16,8 +16,22 @@ public class Ticket{
     public void setId(Long id){
         this.id=id;
     }
-    public Long getFullName(){
+    public String getFullName(){
         return fullName;
     }
-    public void 
+    public void setFullName(){
+        this.fullName=fullName;
+    }
+    public String getLoaction(){
+        return location;
+    }
+    public void setLocation(Strung location){
+        this.loaction=location;
+    }
+    public String getCreatedBy(){
+        return createdBy;
+    }
+    public void setCreatedBy(){
+        
+    }
 }
