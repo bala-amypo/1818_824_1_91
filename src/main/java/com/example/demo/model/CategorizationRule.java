@@ -33,7 +33,7 @@ class CategorizationRule{
     public void setMatchType(String matchType){
         this.matchType=matchType;
     }
-    public String getCategory(){
+    public String getMatchType(){
         return matchType;
     }  
     public void getPriority(int priority){
@@ -45,8 +45,8 @@ class CategorizationRule{
     public void setCreatedAt(String category){
         this.category=category;
     }
-    public String getCategory(){
-        return getCategory;
+    public String getcreatedAt(){
+        return ;
     }
     public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
         this.id=id;
