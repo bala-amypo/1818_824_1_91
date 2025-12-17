@@ -1,11 +1,13 @@
 package com.example.demo.model;
 import jakarta.persistance.Entity;
+import jakarta.persistance.Id;
+import or
 @Entity
 public class Ticket{
     @Id
     private Long id;
     private String fullName;
-    private String loaction;
+    private String location;
     private String createdBy;
     private String createdAt;
     private String assignedCategory;
@@ -22,11 +24,11 @@ public class Ticket{
     public void setFullName(){
         this.fullName=fullName;
     }
-    public String getLoaction(){
+    public String getLocation(){
         return location;
     }
     public void setLocation(Strung location){
-        this.loaction=location;
+        this.laction=location;
     }
     public String getCreatedBy(){
         return createdBy;
@@ -40,16 +42,16 @@ public class Ticket{
     public void setCreatedAt(String createdAt){
         this.createdAt=createdAt;
     }
-    public String getAssignedAt(){
-        return assignedAt;
+    public String getAssignedcategory(){
+        return assignedCategory;
     }
-    public void setAssignedAt(String assignedAt){
-        this assignedAt=assignedAt;
+    public void setAssignedCtaegory(String assignedCategory){
+        this assignedCategory=assignedCtaegory;
     }
     public String getUrgencyLevel(){
         return urgencyLevel;
     }
     public void setUrgencyLevel(String urgencyLevel){
-        this.urgencyLevel=-urgencyLevel;
+        this.urgencyLevel=urgencyLevel;
     }
 }
