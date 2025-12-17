@@ -1,10 +1,11 @@
 package com.example.demo.model;
-import jakarata.persistance.Enrirty;
-import jakarata.presistance.Id;
+import jakarta.persistance.Enrirty;
+import jakarta.presistance.Id;
 @Entity
 class CategorizationRule{
     @Id
-    @NotBlank("")
+    @NotBlank("This Feild is Recquired")
+    @A
     private Long id;
     private String category;
     private String keyword;
