@@ -1,5 +1,5 @@
 package com.example.demo;
-import jakarta.persistance.Entity;
+import jakarta.persistence.Entity;
 @Entity
 public class CategorizationLog{
     private Long id;
@@ -25,7 +25,7 @@ public class CategorizationLog{
         this.appliedRule=appliedRule;
     }
     public String getAppliedRule(){
-        return appliedrule;
+        return appliedRule;
     }
     public void getMatchedKerword(String matchedKeyword){
         this.matchedKeyword=matchedKeyword;
