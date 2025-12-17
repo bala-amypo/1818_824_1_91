@@ -38,5 +38,4 @@ class CategorizationRule{
     public String getCategory(){
         return getCategory;
     }
-    public void  
 }
