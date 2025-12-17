@@ -31,4 +31,5 @@ class CategorizationLog{
     public Timestamp getCreatedAt(){
         return createdAt;
     }
+    
 }
