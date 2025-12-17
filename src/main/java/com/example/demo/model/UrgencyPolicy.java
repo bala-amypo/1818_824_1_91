@@ -5,11 +5,17 @@ public class UrgencyPolicy{
     @Id
     private Long id;
     private String category;
-    private 
-    public getId(){
-
+    private String keyword;
+    private String matchType;
+    private Long priority;
+    private String createdAt;
+    public Long getId(){
+        return id;
     }
-    public setId(){
-
+    public setId(Long id){
+        this.id=id;
+    }
+    public String getCategory(){
+        return 
     }
 }
