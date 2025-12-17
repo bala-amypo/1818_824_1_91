@@ -12,7 +12,7 @@ public class CategorizationRule{
     @NotNull(message="This Feild is Recquired")
     private String keyword;
     private String matchType;
-    @Min(0,message="The priority must be greater than 0")
+    @Min(0)
     private int priority;
     private String createdAt;
     public void setCategory(String category){
