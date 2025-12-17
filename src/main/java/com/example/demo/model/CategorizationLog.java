@@ -53,6 +53,9 @@ class CategorizationLog{
         this.id=id;
         this.ticket=ticket;
         this.appliedRule=appliedRule;
-        this.matched
+        this.matchedKeyword=matchedKeyword;
+        this.assignedCategory=assignedCategory;
+        this.assignedUrgency=assignedUrgency;
     }
+    public CategorizationLog(){}
 }
