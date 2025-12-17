@@ -21,13 +21,10 @@ public class CategorizationLog{
     public String getTicket(){
         return Ticket;
     }
-    public void getAppliedRule(String Ticket){
-        this.appliedRule=apppliedRule;
-    }
     public String setAppliedRule(String matchedKeyword){
         return appliedRule;
     }
-    public void getMatchedKeyword(String matchedKeyword){
+    public void getMatchedKeyword(){
         this.matchedKeyword=matchedKeyword;
     }
     public String setTicket(){

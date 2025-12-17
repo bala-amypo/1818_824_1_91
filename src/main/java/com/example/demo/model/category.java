@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 import jakarta.persistance.Entity;
 @Entity
 public class category{
@@ -7,31 +7,34 @@ public class category{
     private String description;
     private String defaultUrgency;
     private String createdAt;
-    public Long getId(Long id){
+    public Long getId(){
         return id;
     }
-    public void setId(){
+    public void setId(Long id){
         this.id=id;
     }
-    public String getCategoryName(String categoryName){
+    public String getCategoryName(){
         return categoryName;
     }
-    public void setCategoryName(){
+    public void setCategoryName(String categoryName){
         this.categoryName=categoryName;
     }
-    public String getDescription(String description){
+    public String getDescription(){
         return description;
     }
-    public void setDescription(){
+    public void setDescription(String description){
         this.description=description;
     }
-    public String getDefaultUrgency(String defaultUrgency){
+    public String getDefaultUrgency(){
         return defaultUrgency;
     }
-    public void setDefaultUrgency(){
+    public void setDefaultUrgency(String defaultUrgency){
         this.defaultUrgency=defaultUrgency;
     }
-    public String getDefaultUrgency(String createdAt){
-
+    public String getDefaultUrgency(){
+        return createdAt;
+    }
+    public void setDefaultUrgency(String createdAt){
+        this.defaultUrgency=defaultUrgency
     }
 }
