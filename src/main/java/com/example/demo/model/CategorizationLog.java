@@ -19,7 +19,7 @@ public class CategorizationLog{
     public String setAppliedRule(){
         return appliedRule;
     }
-    public void getMatchedKeyword(String matchedKeyword){
+    public void getMatchedKeyword(){
         this.matchedKeyword=matchedKeyword;
     }
     public String setTicket(){
