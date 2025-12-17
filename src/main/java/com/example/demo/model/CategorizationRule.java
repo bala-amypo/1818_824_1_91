@@ -16,7 +16,7 @@ class CategorizationRule{
     private String matchType;
     @Size(min=0,message="thepriority is greterthan 0")
     private int priority;
-    @GeneratedValue(stratergy=GenerationType.Identity)
+    @GeneratedValue(strategy=GenerationType.Identity)
     private String createdAt;
     public void setCategory(String category){
         this.category=category;
@@ -42,7 +42,7 @@ class CategorizationRule{
     public int setPriority(){
         return priority;
     }
-    public void setCreatedAt(String GetCategory){
+    public void setCreatedAt(String category){
         this.category=category;
     }
     public String getCategory(){
@@ -52,8 +52,8 @@ class CategorizationRule{
         this.id=id;
         this.category=category;
         this.keyword=keyword;
-        this matchType=matchType;
-        this priority=priority;
+        this.matchType=matchType;
+        this.priority=priority;
         this.createdAt=createdAt;
     }
     public CategorizationRule(){}

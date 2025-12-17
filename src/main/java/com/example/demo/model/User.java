@@ -1,4 +1,4 @@
-package com.demo.model
-public class User{
+// package com.demo.model
+// public class User{
 
-}
+// }
