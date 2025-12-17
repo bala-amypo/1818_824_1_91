@@ -1,8 +1,9 @@
 package com.example.demo.model;
-import java.util.Timestamp;
 import org.hibernate.annotations.CreationTimestamp;
 import java.sql.Timestamp;
+import jakarta.persistence.Id;
 class CategorizationLog{
+    @Id
     private Long id;
     private String ticket;
     private String appliedRule;
