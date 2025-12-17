@@ -1,5 +1,4 @@
 package com.example.demo.model;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
@@ -40,13 +39,13 @@ public class CategorizationRule{
     public int getPriority(){
         return priority;
     }
-    public void setCreatedAt(String category){
-this.category=category;
+    public void setCreatedAt(String createdAt){
+    this.createdAt=createdAt;
 }
-public String getCreatedAt(){
-return createdAt;
+    public String getCreatedAt(){
+        return createdAt;
 }
-public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
+public CategorizationRule(Long id,String category,String keyword,String matchType,int priority,String createdAt){
 this.id=id;
 this.category=category;
 this.keyword=keyword;
@@ -55,5 +54,4 @@ this.priority=priority;
 this.createdAt=createdAt;
 }
 public CategorizationRule(){}
-CategorizationRule st=new CategorizationRule();
 }
