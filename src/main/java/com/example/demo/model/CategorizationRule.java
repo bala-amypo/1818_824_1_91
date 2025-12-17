@@ -1,4 +1,5 @@
 package com.example.demo.model;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
@@ -6,7 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 @Entity
-class CategorizationRule{
+public class CategorizationRule{
     @Id
     private Long id;
     private String category;
