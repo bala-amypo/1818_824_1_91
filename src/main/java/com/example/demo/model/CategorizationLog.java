@@ -51,4 +51,9 @@ public class CategorizationLog{
     public String getLoggedAt(){
         return loggedAt;
     } 
+    public CategorizationLog(Long id,String Ticket,String appliedRule,String MatchedKeyword,String assignedCategory,private String assignedUrgency,private String loggedAt){
+        this.id=id;
+        this.Ticket=Ticket;
+        this.appliedRule=
+    }
 }
