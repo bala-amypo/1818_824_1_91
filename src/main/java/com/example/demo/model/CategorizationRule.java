@@ -1,8 +1,7 @@
 package com.example.demo.model;
 import jakarta.persistence.Entity;
-import jakarta.presistence.Id;
+import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
-import jakarta.persistence.GenrationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -16,7 +15,6 @@ class CategorizationRule{
     private String matchType;
     @Size(min=0,message="the priority is greterthan 0")
     private int priority;
-    @GeneratedValue(strategy=GenerationType.Identity)
     private String createdAt;
     public void setCategory(String category){
         this.category=category;
