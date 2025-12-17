@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 @Entity
 class CategorizationRule{
+    @Id
     private Long id;
     private String category;
     private String keyword;

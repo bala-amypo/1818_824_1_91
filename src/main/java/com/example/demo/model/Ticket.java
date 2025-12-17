@@ -2,7 +2,7 @@ package com.example.demo.model;
 import jakarta.persistance.Entity;
 @Entity
 public class Ticket{
-    @Id-primary key
+    @Id
     private Long id;
     private String fullName;
     private String loaction;
