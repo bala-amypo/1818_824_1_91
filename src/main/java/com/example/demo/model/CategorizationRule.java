@@ -12,7 +12,7 @@ class CategorizationRule{
     private Long id;
     private String category;
     @NotNull(message="This Feild is Recquired")
-     private String keyword;
+    private String keyword;
     private String matchType;
     @Size(min=0,message="the priority is greterthan 0")
     private int priority;
@@ -35,26 +35,25 @@ class CategorizationRule{
     }
     public String getMatchType(){
         return matchType;
-                                                                                                                                        }  
-                                                                                                                                            public void getPriority(int priority){
-                                                                                                                                                    this.priority=priority;
-                                                                                                                                                        }
-                                                                                                                                                            public int setPriority(){
-                                                                                                                                                                    return priority;
-                                                                                                                                                                        }
-                                                                                                                                                                            public void setCreatedAt(String category){
-                                                                                                                                                                                    this.category=category;
-                                                                                                                                                                                        }
-                                                                                                                                                                                            public String getCreatedAt(){
-                                                                                                                                                                                                    return createdAt;
-                                                                                                                                                                                                        }
-                                                                                                                                                                                                            public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
-                                                                                                                                                                                                                    this.id=id;
-                                                                                                                                                                                                                            this.category=category;
-                                                                                                                                                                                                                                    this.keyword=keyword;
-                                                                                                                                                                                                                                            this.matchType=matchType;
-                                                                                                                                                                                                                                                    this.priority=priority;
-                                                                                                                                                                                                                                                            this.createdAt=createdAt;
-                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                    public CategorizationRule(){}
-                                                                                                                                                                                                                                                                        CategorizationRule st=new CategorizationRule
+    }  
+    public void getPriority(int priority){
+        this.priority=priority;
+    }
+    public int setPriority(){
+        return priority;
+    }
+    public void setCreatedAt(String category){
+this.category=category;
+}
+public String getCreatedAt(){
+return createdAt;
+}
+public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
+this.id=id;
+this.category=category;
+this.keyword=keyword;
+this.matchType=matchType;
+this.priority=priority;
+this.createdAt=createdAt;
+}
+public CategorizationRule(){}
