@@ -7,28 +7,28 @@ public class CategorizationLog{
     private String assignedCategory;
     private String assignedUrgency;
     private String loggedAt;
-    public void getTicket(){
+    public void setTicket(String Ticket){
         this.Ticket=Ticket;
     }
-    public String setTicket(String Ticket){
+    public String getTicket(){
         return Ticket;
     }
-    public void getAppliedRule(){
+    public void getAppliedRule(String Ticket){
         this.appliedRule=apppliedRule;
     }
-    public String setAppliedRule(String appliedRule){
+    public String setAppliedRule(){
         return appliedRule;
     }
-    public void getMatchedKeyword(){
+    public void getMatchedKeyword(String matchedKeyword){
         this.matchedKeyword=matchedKeyword;
     }
-    public String setTicket(String matchedKeyword){
+    public String setTicket(){
         return matchedKeyword;
     }
-    public void getAssignedCategory(){
+    public void getAssignedCategory(String assignedCategory){
         this.assignedCategory=assignedCategory;
     }
-    public String setAssignedCategory(String assignedCategory){
+    public String setAssignedCategory(){
         return assignedCtaegory;
     }
     public void getAssignedUrgency(){

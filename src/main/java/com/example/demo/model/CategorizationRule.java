@@ -8,34 +8,34 @@ class CategorizationRule{
     private String matchType;
     private int priority;
     private String createdAt;
-    public void setCategory(){
+    public void setCategory(String category){
         this.category=category;
     }
-    public String getCategory(String category){
+    public String getCategory(){
         return category;
     }
-    public void setKeyword(){
+    public void setKeyword(String keyword){
         this.keyword=category;
     }
-    public String getKeyword(String keyword){
+    public String getKeyword(){
         return keyword;
     }
-    public void setMatchType(){
+    public void setMatchType(String matchType){
         this.matchType=matchType;
     }
-    public String getCategory(String matchType){
+    public String getCategory(){
         return matchType;
     }  
-    public void getPriority(){
+    public void getPriority(int priority){
         this.priority=priority
     }
-    public int setPriority(int priority){
+    public int setPriority(){
         return priority
     }
-    public void setCreatedAt(){
+    public void setCreatedAt(String GetCategory){
         this.category=category
     }
-    public String getCategory(String GetCategory){
+    public String getCategory(){
         return getCategory
     } 
 }
