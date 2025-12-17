@@ -1,6 +1,13 @@
 package com.example.demo.model;
+import java.util.Timestamp;
+package jakarta.
 class CategorizationLog{
-    public Long id;
-    public String ticket;
-    public String applied
+    private Long id;
+    private String ticket;
+    private String appliedRule;
+    private String matchedKeyword;
+    private String assignedCategory;
+    private String assignedUrgency;
+    @CreationTimestamp
+    private Timestamp createdAt;
 }
