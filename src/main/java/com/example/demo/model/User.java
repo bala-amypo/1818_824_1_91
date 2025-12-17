@@ -1,6 +1,7 @@
 package com.demo.model;
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
+import java.sql.
 import org.hibernate.annotations.CreationTimestamp;
 @Entity
 public class User{
@@ -36,8 +37,16 @@ public class User{
     public void setFullName(String fullname){
         this.fullName=fullName;
     }
-    public void setEmail(String Email){
+    public void setEmail(String email){
         this.email=email;
     }
-    public void setPass
+    public void setPassword(String password){
+        this.password=password;
+    }
+    public void setRole(String role){
+        this.role=role;
+    }
+    public void setCreatedAt(Timestamp createdAt){
+        this.createdAt=createdAt;
+    }
 }
