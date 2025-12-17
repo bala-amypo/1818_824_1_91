@@ -38,17 +38,11 @@ public class Ticket{
     public void setCreatedBy(String createdBy){
         this.createdBy=createdBy;
     }
-    public String getCreatedAt(){
-        return createdAt();
-    }
-    public void setCreatedAt(String createdAt){
-        this.createdAt=createdAt;
-    }
     public String getAssignedcategory(){
         return assignedCategory;
     }
     public void setAssignedCtaegory(String assignedCategory){
-        this assignedCategory=assignedCtaegory;
+        this.assignedCategory=assignedCategory;
     }
     public String getUrgencyLevel(){
         return urgencyLevel;
@@ -62,9 +56,13 @@ public class Ticket{
     public void setCreatedAt(Timestamp createdAt){
         this.createdAt=createdAt;
     }
-    public Ticket(Long id,String fullName,String Loaction,String createdBy,Timestamp createdAt,String assignedCategory,private String urgencyLevel){
+    public Ticket(Long id,String fullName,String Loaction,String createdBy,Timestamp createdAt,String assignedCategory,String urgencyLevel){
         this.id=id;
         this.location=location;
-        this.createdBy=created
+        this.createdBy=createdBy;
+        this.createdAt=createdAt;
+        this.assignedCategory=assignedCategory;
+        this.urgencyLevel=urgencyLevel;
     }
+    public Ticket(){}
 }
