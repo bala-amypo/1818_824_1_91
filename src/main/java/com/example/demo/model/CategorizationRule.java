@@ -34,10 +34,10 @@ public class CategorizationRule{
     public String getMatchType(){
         return matchType;
     }  
-    public void getPriority(int priority){
+    public void setPriority(int priority){
         this.priority=priority;
     }
-    public int setPriority(){
+    public int getPriority(){
         return priority;
     }
     public void setCreatedAt(String category){
