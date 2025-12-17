@@ -31,7 +31,19 @@ public class Ticket{
     public String getCreatedBy(){
         return createdBy;
     }
-    public void setCreatedBy(){
-        
+    public void setCreatedBy(String createdBy){
+        this.createdBy=createdBy;
+    }
+    public String getCreatedAt(){
+        return createdAt();
+    }
+    public void setCreatedAt(String createdAt){
+        this.createdAt=createdAt;
+    }
+    public String getAssignedAt(){
+        return assignedAt;
+    }
+    public void setAssignedAt(){
+        ret
     }
 }
