@@ -38,8 +38,8 @@ public class Category{
     public Timestamp getcreatedAt(){
         return createdAt;
     }
-      public void setCreatedAt(String createdAt){
-    this.createdAt=createdAt;
+      public void setCreatedAt(Timestamp createdAt){
+            this.createdAt=createdAt;
 }
     public Category(Long id,String categoryName,String description,String defaultUrgency,Timestamp createdAt){
         this.id=id;
