@@ -4,13 +4,14 @@ import jakarta.presistance.Id;
 @Entity
 class CategorizationRule{
     @Id
-    @GeneratedValue(stratergy=GenerationType.Identity)
     private Long id;
     private String category;
     @NotNull(message="This Feild is Recquired")
     private String keyword;
     private String matchType;
+    @Size(min=0,message="thepriority is greterthan 0")
     private int priority;
+    @GeneratedValue(stratergy=GenerationType.Identity)
     private String createdAt;
     public void setCategory(String category){
         this.category=category;
