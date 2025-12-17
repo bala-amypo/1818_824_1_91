@@ -45,8 +45,8 @@ class CategorizationRule{
     public void setCreatedAt(String category){
         this.category=category;
     }
-    public String getcreatedAt(){
-        return ;
+    public String getCreatedAt(){
+        return createdAt;
     }
     public CategorizationRule(Long id,String category,String keyword,String matchType,int Priority,String createdAt){
         this.id=id;
