@@ -1,6 +1,6 @@
 package com.example.demo.model;
-import jakarta.persistance.Entity;
-import jakarta.persistance.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 import java.sql.Timestamp;
 @Entity
@@ -29,8 +29,8 @@ public class Ticket{
     public String getLocation(){
         return location;
     }
-    public void setLocation(Strung location){
-        this.laction=location;
+    public void setLocation(String location){
+        this.location=location;
     }
     public String getCreatedBy(){
         return createdBy;
@@ -50,7 +50,7 @@ public class Ticket{
     public void setUrgencyLevel(String urgencyLevel){
         this.urgencyLevel=urgencyLevel;
     }
-    public String getCreatedAt(){
+    public Timestamp getCreatedAt(){
         return createdAt;
     }
     public void setCreatedAt(Timestamp createdAt){
