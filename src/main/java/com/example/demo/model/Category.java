@@ -39,16 +39,16 @@ public class Category{
         return Timestamp;
     }
     public void setTimestamp(Timestamp createdAt){
-        this.createdAt=createdAt
+        this.createdAt=createdAt;
     }
     public Category(Long id,String categoryName,String description,String defaultUrgency,Timestamp createdAt){
-        this id=id;
+        this.id=id;
         this.categoryName=categoryName;
         this.description=description;
         this.defaultUrgency=defaultUrgency;
         this.createdAt=createdAt;
 }
-public Ctaegory(){
-    
+public Category(){
+
 }
 }
