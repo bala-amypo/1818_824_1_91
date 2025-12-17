@@ -1,6 +1,8 @@
 package com.example.demo.model;
-import jakarta.persistance.Enrirty;
-import jakarta.presistance.Id;
+import jakarta.persistence.Entity;
+import jakarta.presistence.Id;
+import jakarta.persistence.PrePersist;
+import jakarta.persistance.
 @Entity
 class CategorizationRule{
     @Id
