@@ -27,5 +27,16 @@ public class UrgencyPolicy{
     public void setMatchType(String matchType){
         this.matchType=matchType;
     }
-    public String get
+    public String getPriority(){
+        return priority;
+    }
+    public void setPriority(String priority){
+        this.priority=priority;
+    }
+    public String getPriority(){
+        
+    }
+    public void setCreatedAt(String createdAt){
+        this.createdAt
+    }
 }
