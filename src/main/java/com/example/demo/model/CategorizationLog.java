@@ -1,5 +1,6 @@
-package com.example.demo
+package com.example.demo;
 import jakarta.persistance.Entity;
+@Entity
 public class CategorizationLog{
     private Long id;
     private String Ticket;
