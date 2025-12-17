@@ -3,7 +3,7 @@ package com.example.demo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Min;
 
 @Entity
 public class CategorizationRule{
@@ -13,7 +13,7 @@ public class CategorizationRule{
     @NotNull(message="This Feild is Recquired")
     private String keyword;
     private String matchType;
-    @Size(min=0,message="the priority is greterthan 0")
+    @Min(0)
     private int priority;
     private String createdAt;
     public void setCategory(String category){
@@ -23,7 +23,7 @@ public class CategorizationRule{
         return category;
     }
     public void setKeyword(String keyword){
-        this.keyword=category;
+        this.keyword=keyword;
     }
     public String getKeyword(){
         return keyword;
