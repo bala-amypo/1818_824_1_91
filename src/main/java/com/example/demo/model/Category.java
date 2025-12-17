@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 @Entity
 public class Category{
+    @Id
     private Long id;
     private String categoryName;
     private String description;
