@@ -12,10 +12,16 @@ public class UrgencyPolicy{
     public Long getId(){
         return id;
     }
-    public setId(Long id){
+    public void setId(Long id){
         this.id=id;
     }
     public String getCategory(){
-        return 
+        return category;
     }
+    public void setCategory(String category){
+        this.category=category;
+    }
+    public String getMatchType(){
+
+    } 
 }
