@@ -21,20 +21,23 @@ public class CategorizationLog{
     public String getTicket(){
         return Ticket;
     }
-    public String setAppliedRule(String matchedKeyword){
-        return appliedRule;
+    public void setAppliedRule(String appliedRule){
+        this.appliedRule=appliedRule;
     }
-    public String  getMatchedKeyword(String matchedKeyword){
-        return matchedKeyword;
+    public String getAppliedRule(){
+        return appliedrule;
     }
-    public String setTicket(){
+    public void getMatchedKerword(String matchedKeyword){
+        this.matchedKeyword=matchedKeyword;
+    }
+    public String  setMatchedKeyword(){
         return matchedKeyword;
     }
     public void setAssignedCategory(String assignedCategory){
         this.assignedCategory=assignedCategory;
     }
     public String getAssignedCategory(){
-        return assignedCtaegory;
+        return assignedCategory;
     }
     public void setAssignedUrgency(String assignedUrgency){
         this.assignedUrgency=assignedUrgency;
