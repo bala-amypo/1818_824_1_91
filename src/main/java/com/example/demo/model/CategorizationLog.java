@@ -5,7 +5,7 @@ public class CategorizationLog{
     private Long id;
     private String Ticket;
     private String appliedRule;
-    private String MatchedKeyword;
+    private String matchedKeyword;
     private String assignedCategory;
     private String assignedUrgency;
     private String loggedAt;
@@ -51,9 +51,14 @@ public class CategorizationLog{
     public String getLoggedAt(){
         return loggedAt;
     } 
-    public CategorizationLog(Long id,String Ticket,String appliedRule,String MatchedKeyword,String assignedCategory,private String assignedUrgency,private String loggedAt){
+    public CategorizationLog(Long id,String Ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency,String loggedAt){
         this.id=id;
         this.Ticket=Ticket;
-        this.appliedRule=
+        this.appliedRule=appliedRule;
+        this.matchedKeyword=matchedKeyword;
+        this.assignedCategory=assignedCategory;
+        this.assignedUrgency=assignedUrgency;
+        this.loggedAt=loggedAt;
     }
+    public CategorizationLog(){}
 }
