@@ -43,7 +43,13 @@ public class Ticket{
     public String getAssignedAt(){
         return assignedAt;
     }
-    public void setAssignedAt(){
-        ret
+    public void setAssignedAt(String assignedAt){
+        this assignedAt=assignedAt;
+    }
+    public String getUrgencyLevel(){
+        return urgencyLevel;
+    }
+    public void setUrgencyLevel(String urgencyLevel){
+        this.urgencyLevel=-urgencyLevel;
     }
 }

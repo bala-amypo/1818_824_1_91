@@ -22,6 +22,10 @@ public class UrgencyPolicy{
         this.category=category;
     }
     public String getMatchType(){
-
+        return matchType;
     } 
+    public void setMatchType(String matchType){
+        this.matchType=matchType;
+    }
+    public String get
 }
