@@ -8,8 +8,19 @@ public class category{
     private String defaultUrgency;
     private String createdAt;
     private String createdAt;
-    public void getId(Long id){
+    public Long getId(Long id){
+        return id;
+    }
+    public void setId(){
         this.id=id;
     }
-    public 
+    public String getCategoryName(String categoryName){
+        return categoryName;
+    }
+    public void setCategoryName(){
+        this.categoryName=categoryName;
+    }
+    public String getDescription(String description){
+        return descriptio
+    }
 }
