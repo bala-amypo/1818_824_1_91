@@ -31,5 +31,16 @@ class CategorizationLog{
     public Timestamp getCreatedAt(){
         return createdAt;
     }
-    
+    public void SetId(Long id){
+        this.id=id;
+    }
+    public void ticket(String ticket){
+        this.ticket=ticket;
+    }
+    public void appliedRule(){
+        
+    }
+    public CategorizationLog(Long id,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
+
+    }
 }
