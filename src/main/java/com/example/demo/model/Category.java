@@ -1,12 +1,16 @@
 package com.example.demo.model;
 import jakarta.persistance.Entity;
+import java.sql.Timestamp;
+import jakarta.persistance.Id;
+import org.hibernate.annotations.CreationTimestamp;
 @Entity
-public class category{
+public class Category{
     private Long id;
     private String categoryName;
     private String description;
     private String defaultUrgency;
-    private String createdAt;
+    @CreationTimestamp
+    private Timestamp createdAt;
     public Long getId(){
         return id;
     }
@@ -31,10 +35,12 @@ public class category{
     public void setDefaultUrgency(String defaultUrgency){
         this.defaultUrgency=defaultUrgency;
     }
-    public String getDefaultUrgency(){
-        return createdAt;
+    public Timestamp getTimestamp(){
+        return Timestamp;
     }
-    public void setDefaultUrgency(String createdAt){
-        this.defaultUrgency=defaultUrgency
+    public void setTimestamp(Timestamp createdAt){
+        this.createdAt=createdAt
     }
+    public Category(L){
+
 }
