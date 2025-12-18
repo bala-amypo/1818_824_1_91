@@ -1,5 +1,5 @@
 package com.example.demo.service;
-import jakarta.
+import org.springframework.steroetype.Service;
 import com.example.demo.model.Category;
 @Service
 public interface CategoryService{
