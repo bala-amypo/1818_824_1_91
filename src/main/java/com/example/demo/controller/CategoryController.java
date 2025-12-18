@@ -3,6 +3,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.service.CategoryService;
+import com.example.demo.entity.Category;
 @RestController
 public class CategoryController{
 @Autowired
