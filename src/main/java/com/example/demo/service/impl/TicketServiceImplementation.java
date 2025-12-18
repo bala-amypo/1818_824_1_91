@@ -8,5 +8,11 @@ class TicketServiceImplementation implements TicketService{
 Ticketrepo obj;
     public Ticket createTicket(Ticket Ticket){
         return obj.create(Ticket);
-    };
+    }
+    public Ticket getTicket(Long id){
+        return obj.getById(id);
+    }
+    public List<Category> getAllCategories(){
+        return obj.findAll();
+    }
 }
