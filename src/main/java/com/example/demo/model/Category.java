@@ -4,7 +4,8 @@ import java.time.LocalDateTime;
 import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistance.PrePersist;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.Min;
 import jakarta.persistence.unique;
 @Entity
 public class Category{
@@ -13,11 +14,11 @@ public class Category{
     private Long id;
     @column(unique=true)
     private String categoryName;
+    @Min(10)
     private String description;
     @NotNull(message="No empty")
     private String defaultUrgency;
     private LocalDateTime createdAt;
-    @PrePersist
     @PrePersist
     public void onCreate(){
         if(createdAt==null){
