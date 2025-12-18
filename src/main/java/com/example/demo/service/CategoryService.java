@@ -4,5 +4,5 @@ import java.util.List;
 public interface CategoryService{
     public Category createCategory(Category category);
     // public Category getCategory(Long id);
-    /public List<Category> getAllCategories();
+    public List<Category> getAllCategories();
 }

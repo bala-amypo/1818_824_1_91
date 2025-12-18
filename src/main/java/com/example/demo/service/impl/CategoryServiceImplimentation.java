@@ -13,6 +13,6 @@ public class CategoryServiceImplimentation implements CategoryService{
         return obj.save(category);
     }
     public List<Category> getAllCategories(){
-        obj.findAll();
+        return obj.findAll();
     }
 }
