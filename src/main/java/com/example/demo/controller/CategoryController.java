@@ -1,6 +1,7 @@
-import org.springframework.beans.factory.annotations.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.service.CategoryService;
 @RestController
 public class CategoryController{
