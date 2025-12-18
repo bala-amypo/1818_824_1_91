@@ -18,8 +18,8 @@ public class CategorizationLog{
     private LocalTimeDate createdAt;
     @PrePersist
     public void onCreate(){
-        if(checkTime==null){
-            checkTime=LocalDateTime.now();
+        if(createdAt==null){
+            createdAt=LocalDateTime.now();
         }
     }
     public Long getId(){
