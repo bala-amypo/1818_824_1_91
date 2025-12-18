@@ -1,4 +1,4 @@
-import org.springframework.web.bind.annotation.Service;
+import org.springframework.stereotype.Service;
 import com.example.demo.model.Ticket;
 import com.example.demo.repository.Ticketrepo;
 import org.springframework.beans.factory.annotation.Autowired;
