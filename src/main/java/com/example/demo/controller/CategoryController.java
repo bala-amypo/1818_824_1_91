@@ -1,6 +1,6 @@
 import org.springframework.web.beans.factory.annotations.Autowired;
 import org.springframework.web.bind.factory.annotations.RestController;
-import com.example.demo.service.C
+import jakarta.persistence.service.CategoryService;
 @RestController
 public class CategoryController{
 @Autowired
