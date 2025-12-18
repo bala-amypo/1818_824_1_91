@@ -4,6 +4,7 @@ import com.example.demo.model.Category;
 import com.example.demo.repository.Categoryrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
 @Service
 class CategoryServiceImplimentation implements CategoryService{
     @Autowired
@@ -11,7 +12,7 @@ class CategoryServiceImplimentation implements CategoryService{
     public Category createCategory(Category category){
         return obj.save(category);
     }
-    public List<Category> getAllCategory(){
-        return obj.findAll();
+    public List<Category> getAllCategories(){
+        obj.findAll();
     }
 }
