@@ -3,10 +3,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
-import 
+import java.time.LocalDateTime;
+import jakarta.prepersist.GenerationType;
+import jakarta.prepersist.GeneratedValue;
 @Entity
 public class CategorizationRule{
     @Id
+    @GeneratedValues(statergy=GenerationType=Identity)
     private Long id;
     private String category;
     @NotNull(message="This Feild is Recquired")
@@ -45,13 +48,13 @@ public class CategorizationRule{
     public int getPriority(){
         return priority;
     }
-    public void setCreatedAt(String createdAt){
+    public void setCreatedAt(LocalDateTime createdAt){
     this.createdAt=createdAt;
 }
-    public String getCreatedAt(){
+    public LocalDateTime getCreatedAt(){
         return createdAt;
 }
-public CategorizationRule(Long id,String category,String keyword,String matchType,int priority,String createdAt){
+public CategorizationRule(Long id,String category,String keyword,String matchType,int priority,LocalDateTime createdAt){
 this.id=id;
 this.category=category;
 this.keyword=keyword;
