@@ -1,2 +1,9 @@
 package com.example.demo.service;
-public interface Ticket
+import java.util.List;
+import com.example.demo.
+public interface TicketService{
+    Ticket createTicket(Ticket Ticket){};
+    Ticket getTicket(Long id){
+    }
+    List<Category> getAllCategories(){}
+}
