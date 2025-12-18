@@ -1,5 +1,4 @@
 package com.example.demo.model;
-import org.hibernate.annotations.CreationTimestamp;
 import java.sql.Timestamp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -16,7 +15,6 @@ class CategorizationLog{
     private String matchedKeyword;
     private String assignedCategory;
     private String assignedUrgency;
-    @CreationTimestamp
     private Timestamp createdAt;
     @PrePersist
     public void onCreate(){
@@ -58,8 +56,9 @@ class CategorizationLog{
     public void setAssignedUrgency(String assignedUrgency){
         this.assignedUrgency=assignedUrgency;
     }
-    public CategorizationLog(Long id,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
+    public CategorizationLog(Long id,Timestamp createdAt,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
         this.ticket=ticket;
+        this.createdAt=createdAt;
         this.appliedRule=appliedRule;
         this.matchedKeyword=matchedKeyword;
         this.assignedCategory=assignedCategory;
