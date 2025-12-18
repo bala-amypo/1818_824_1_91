@@ -4,12 +4,13 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
 import java.time.LocalDateTime;
-import jakarta.prepersist.GenerationType;
-import jakarta.prepersist.GeneratedValue;
+import jakarta.persistance.GenerationType;
+import jakarta.persistance.GeneratedValue;
+import jakarta.persistance.PrePersist;
 @Entity
 public class CategorizationRule{
     @Id
-    @GeneratedValues(statergy=GenerationType=Identity)
+    @GeneratedValues(statergy=GenerationType.IDENTITY)
     private Long id;
     private String category;
     @NotNull(message="This Feild is Recquired")
