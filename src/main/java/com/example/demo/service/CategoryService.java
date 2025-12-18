@@ -3,13 +3,7 @@ import com.example.demo.entity.Category;
 import jakarta.persistence.Service;
 @Sevice
 public interface CategoryService{
-    public Category createCategory(Category category){
-
-    }
-    public Category getCategory(Long id){
-
-    }
-    public List<Category> getAllCategories(){
-
-    }
+    public Category createCategory(Category category);
+    public Category getCategory(Long id);
+    public List<Category> getAllCategories();
 }
