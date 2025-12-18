@@ -10,7 +10,7 @@ import jakarta.persistence.PrePersist;
 @Entity
 public class CategorizationRule{
     @Id
-    @GeneratedValues(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String category;
     @NotNull(message="This Feild is Recquired")

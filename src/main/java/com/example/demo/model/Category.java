@@ -2,13 +2,16 @@ package com.example.demo.model;
 import jakarta.persistence.Entity;
 import java.sql.Timestamp;
 import jakarta.persistence.Id;
-import org.hibernate.annotations.CreationTimestamp;
+import jakarta.persistence.
+import jakarta.persistence.unique;
 @Entity
 public class Category{
     @Id
     private Long id;
+    @column(unique=true)
     private String categoryName;
     private String description;
+    @NotNull(message="No empty")
     private String defaultUrgency;
     @CreationTimestamp
     private Timestamp createdAt;
