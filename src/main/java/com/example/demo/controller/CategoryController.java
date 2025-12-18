@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springfarmework.web.bind.anno
+import org.springfarmework.web.bind.annotation.PathVariable;
 import com.example.demo.service.CategoryService;
 import com.example.demo.model.Category;
 import java.util.List;
