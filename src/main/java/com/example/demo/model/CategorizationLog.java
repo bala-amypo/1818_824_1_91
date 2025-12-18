@@ -4,12 +4,12 @@ import java.sql.Timestamp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.GeneratedValues;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
 @Entity
 class CategorizationLog{
     @Id
-    @GenertedValues(statergy=GnerationType.Identity)
+    @GenertedValue(strategy=GnerationType.IDENTITY);
     private Long id;
     private String ticket;
     private String appliedRule;
@@ -20,7 +20,7 @@ class CategorizationLog{
     private Timestamp createdAt;
     @PrePersist
     public void onCreate(){
-        this.createdAt=
+        this.createdAt=new Timestamp(System.currentTimeMillis());
     }
     public Long getId(){
         return id;
