@@ -1,8 +1,10 @@
 import org.springframework.web.bind.annotation.Service;
 import com.example.demo.model.Ticket;
-import com.example.demo.
+import com.example.demo.repository.Ticketrepo;
+import org.springframework.bean.factory.annotation.Autowired;
 @Service
 class TicketServiceImplementation implements TicketService{
+@Autowired
     public Ticket createTicket(Ticket Ticket){
         return 
     };
