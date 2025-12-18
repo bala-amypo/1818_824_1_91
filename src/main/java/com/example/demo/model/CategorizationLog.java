@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 @Entity
 class CategorizationLog{
     @Id
+    
     private Long id;
     private String ticket;
     private String appliedRule;
