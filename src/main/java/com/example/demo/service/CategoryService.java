@@ -1,5 +1,6 @@
 package com.example.demo.service;
-import com.example.demo.entity.Category;
+import jakarta.
+import com.example.demo.model.Category;
 @Service
 public interface CategoryService{
     public Category createCategory(Category category);
