@@ -5,14 +5,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
-import jakarta.persistence.Min;
 import jakarta.persistence.unique;
+import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
 @Entity
 public class Category{
     @Id
-    @GeneratedValue(stratergy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    @column(unique=true)
+    @Column(unique=true)
     private String categoryName;
     @Min(10)
     private String description;
