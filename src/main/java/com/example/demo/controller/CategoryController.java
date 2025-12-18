@@ -10,7 +10,7 @@ import java.util.List;
 public class CategoryController{
 @Autowired
 CategoryService cs;
-@PostMapping("/at")
+@PostMapping("/Category")
 public Category postData(@RequestBody Category cty){
     return cs.createCategory(cty);
 }
