@@ -3,10 +3,12 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.sql.Timestamp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValues;
 @Entity
 class CategorizationLog{
     @Id
-    
+    @Gener
     private Long id;
     private String ticket;
     private String appliedRule;
