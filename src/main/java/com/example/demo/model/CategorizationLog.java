@@ -1,5 +1,5 @@
 package com.example.demo.model;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
@@ -15,7 +15,7 @@ public class CategorizationLog{
     private String matchedKeyword;
     private String assignedCategory;
     private String assignedUrgency;
-    private Timestamp createdAt;
+    private LocalTimeDate createdAt;
     @PrePersist
     public void onCreate(){
         this.createdAt=new Timestamp(System.currentTimeMillis());
@@ -38,7 +38,7 @@ public class CategorizationLog{
     public String getAssignedUrgency(){
         return assignedUrgency;
     }
-    public Timestamp getCreatedAt(){
+    public LocalDateTime getCreatedAt(){
         return createdAt;
     }
     public void setTicket(String ticket){
@@ -55,6 +55,9 @@ public class CategorizationLog{
     }
     public void setAssignedUrgency(String assignedUrgency){
         this.assignedUrgency=assignedUrgency;
+    }
+    public void setCreatedAt(LoaclDateTime createdAt){
+        t
     }
     public CategorizationLog(Long id,Timestamp createdAt,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
         this.ticket=ticket;
