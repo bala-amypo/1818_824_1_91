@@ -15,7 +15,7 @@ public class CategorizationLog{
     private String matchedKeyword;
     private String assignedCategory;
     private String assignedUrgency;
-    private LocalTimeDate createdAt;
+    private LocalDateTime createdAt;
     @PrePersist
     public void onCreate(){
         if(createdAt==null){

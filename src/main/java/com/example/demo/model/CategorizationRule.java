@@ -3,7 +3,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
-
+import 
 @Entity
 public class CategorizationRule{
     @Id
@@ -14,7 +14,13 @@ public class CategorizationRule{
     private String matchType;
     @Min(0)
     private int priority;
-    private String createdAt;
+    private LocalDateTime createdAt;
+    @PrePersist
+    public void onCreate(){
+        if(createdAt==null){
+            createdAt=LocalDateTime.now();
+        }
+    }
     public void setCategory(String category){
         this.category=category;
         }
