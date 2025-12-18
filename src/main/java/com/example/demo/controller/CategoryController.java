@@ -20,7 +20,7 @@ List<Category> getalldata(){
     return cs.getAllCategories();
 }
 @GetMapping("/{id}")
-Category getIdData(){
-    
+Category getIdData(@PathVariable Long id){
+   return getCategory(Long id);
 }
 }
