@@ -9,7 +9,7 @@ import jakarta.persistence.PrePersist;
 @Entity
 class CategorizationLog{
     @Id
-    @GenertedValue(strategy=GnerationType.IDENTITY);
+ @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String ticket;
     private String appliedRule;
