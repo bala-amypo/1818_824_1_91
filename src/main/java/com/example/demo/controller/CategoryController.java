@@ -21,6 +21,6 @@ List<Category> getalldata(){
 }
 @GetMapping("/{id}")
 Category getIdData(@PathVariable Long id){
-   return getCategory(Long id);
+    return getCategory(Long id);
 }
 }
