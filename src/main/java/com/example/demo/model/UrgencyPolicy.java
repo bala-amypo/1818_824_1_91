@@ -2,18 +2,27 @@ package com.example.demo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
-import jakarta.persistance.GenerationType;
-import jakarta.persistance.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.validation.constraint.NotNull;
+import jakarta.persistence.PrePersist;
 @Entity
 public class UrgencyPolicy{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String category;
+    @NotNull(message="No Data")
     private String keyword;
     private String matchType;
     private Long priority;
     private LocalDateTime createdAt;
+    @PrePersist
+    public void onCreate(){
+        if(createdAt==null){
+            createdAt=LocalDateTime.now();
+        }
+    }
     public Long getId(){
         return id;
     }
