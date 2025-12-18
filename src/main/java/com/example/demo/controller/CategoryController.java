@@ -1,7 +1,4 @@
-
-
-
-
+import jakarta.
 @RestController
 public class CategoryController{
 
@@ -9,7 +6,7 @@ public class CategoryController{
 CategoryService cs;
 
 public Category postData(@RequestBody Category cty){
-    return cs.
+    return cs.createCategory(cty);
 }
 
 
