@@ -1,20 +1,29 @@
 package com.example.demo.model;
 import jakarta.persistence.Entity;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import jakarta.persistence.Id;
-import jakarta.persistence.
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistance.PrePersist;
 import jakarta.persistence.unique;
 @Entity
 public class Category{
     @Id
+    @GeneratedValue(stratergy=GenerationType.IDENTITY)
     private Long id;
     @column(unique=true)
     private String categoryName;
     private String description;
     @NotNull(message="No empty")
     private String defaultUrgency;
-    @CreationTimestamp
-    private Timestamp createdAt;
+    private LocalDateTime createdAt;
+    @PrePersist
+    @PrePersist
+    public void onCreate(){
+        if(createdAt==null){
+            createdAt=LocalDateTime.now();
+        }
+    }
     public Long getId(){
         return id;
     }
