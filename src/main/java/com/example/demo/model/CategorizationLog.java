@@ -9,7 +9,7 @@ import jakarta.persistence.PrePersist;
 @Entity
 class CategorizationLog{
     @Id
- @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String ticket;
     private String appliedRule;
@@ -43,9 +43,6 @@ class CategorizationLog{
     public Timestamp getCreatedAt(){
         return createdAt;
     }
-    public void SetId(Long id){
-        this.id=id;
-    }
     public void setTicket(String ticket){
         this.ticket=ticket;
     }
@@ -62,7 +59,6 @@ class CategorizationLog{
         this.assignedUrgency=assignedUrgency;
     }
     public CategorizationLog(Long id,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
-        this.id=id;
         this.ticket=ticket;
         this.appliedRule=appliedRule;
         this.matchedKeyword=matchedKeyword;
