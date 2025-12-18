@@ -5,7 +5,8 @@ import org.springframework.bean.factory.annotation.Autowired;
 @Service
 class TicketServiceImplementation implements TicketService{
 @Autowired
+Ticketrepo obj;
     public Ticket createTicket(Ticket Ticket){
-        return 
+        return obj.create(Ticket);
     };
 }
