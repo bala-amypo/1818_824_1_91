@@ -5,7 +5,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
-import jakarta.persistence.unique;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
@@ -51,13 +50,13 @@ public class Category{
     public void setDefaultUrgency(String defaultUrgency){
         this.defaultUrgency=defaultUrgency;
     }
-    public Timestamp getcreatedAt(){
+    public LocalDateTime getcreatedAt(){
         return createdAt;
     }
-      public void setCreatedAt(Timestamp createdAt){
+      public void setCreatedAt(LocalDateTime createdAt){
             this.createdAt=createdAt;
 }
-    public Category(Long id,String categoryName,String description,String defaultUrgency,Timestamp createdAt){
+    public Category(Long id,String categoryName,String description,String defaultUrgency,LocalDateTime createdAt){
         this.id=id;
         this.categoryName=categoryName;
         this.description=description;
