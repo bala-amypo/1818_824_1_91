@@ -19,4 +19,6 @@ public Category postData(@RequestBody Category cty){
 List<Category> getalldata(){
     return cs.getAllCategories();
 }
+@GetMapping("/{id}")
+Cate
 }
