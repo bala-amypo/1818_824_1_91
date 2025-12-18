@@ -5,159 +5,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValues;
+import jakarta.persistence.PrePersist;
 @Entity
 class CategorizationLog{
     @Id
-    @GenertedValues(
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    )
+    @GenertedValues(statergy=GnerationType.Identity)
     private Long id;
     private String ticket;
     private String appliedRule;
@@ -166,6 +18,10 @@ class CategorizationLog{
     private String assignedUrgency;
     @CreationTimestamp
     private Timestamp createdAt;
+    @PrePersist
+    public void onCreate(){
+        this.createdAt=
+    }
     public Long getId(){
         return id;
     }
