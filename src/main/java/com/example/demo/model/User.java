@@ -1,19 +1,26 @@
 package com.demo.model;
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
-import jakarta.presistence.column;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
-import jakarta.persistence.PrePersist
+import jakarta.persistence.PrePersist;
 import java.time.LocalDateTime;
 @Entity
 public class User{
     @Id
     private Long id;
     private String fullName;
+    @Column(unique=true)
     private String email;
     private String password;
     private String role;
     private LocalDateTime createdAt;
+    @PrePersist
+    public void onCreate(){
+        if(createdAt==null){
+            createdAt=LocalDateTime.now();
+        }
+    }
     Long getId(){
         return id;
     }
@@ -29,7 +36,7 @@ public class User{
     String getRole(){
         return role;
     }
-    Timestamp getCreatedAt(){
+    LocalDateTime getCreatedAt(){
         return createdAt;
     }
     public void setId(Long id){
@@ -47,10 +54,10 @@ public class User{
     public void setRole(String role){
         this.role=role;
     }
-    public void setCreatedAt(Timestamp createdAt){
+    public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt=createdAt;
     }
-    public User(Long id,String fullName,String email,String password,String role,Timestamp createdAt){
+    public User(Long id,String fullName,String email,String password,String role,LocalDateTime createdAt){
         this.id=id;
         this.fullName=fullName;
         this.email=email;
