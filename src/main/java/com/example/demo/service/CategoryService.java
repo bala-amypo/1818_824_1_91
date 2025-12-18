@@ -1,1 +1,4 @@
-package com.example.service;
+package com.example.demo.service;\
+public interface CategoryService{
+    
+}
