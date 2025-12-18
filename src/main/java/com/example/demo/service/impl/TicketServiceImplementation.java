@@ -1,0 +1,3 @@
+class TicketServiceImplementation implements Ticket{
+
+}
