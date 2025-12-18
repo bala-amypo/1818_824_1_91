@@ -18,7 +18,9 @@ public class CategorizationLog{
     private LocalTimeDate createdAt;
     @PrePersist
     public void onCreate(){
-        this.createdAt=new Timestamp(System.currentTimeMillis());
+        if(checkTime==null){
+            checkTime=LocalDateTime.now();
+        }
     }
     public Long getId(){
         return id;
@@ -56,10 +58,10 @@ public class CategorizationLog{
     public void setAssignedUrgency(String assignedUrgency){
         this.assignedUrgency=assignedUrgency;
     }
-    public void setCreatedAt(LoaclDateTime createdAt){
-        t
+    public void setCreatedAt(LocalDateTime createdAt){
+        this.createdAt=createdAt;
     }
-    public CategorizationLog(Long id,Timestamp createdAt,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
+    public CategorizationLog(Long id,LocalDateTime createdAt,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
         this.ticket=ticket;
         this.createdAt=createdAt;
         this.appliedRule=appliedRule;
