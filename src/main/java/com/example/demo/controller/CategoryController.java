@@ -16,5 +16,7 @@ public Category postData(@RequestBody Category cty){
     return cs.createCategory(cty);
 }
 @GetMapping
-
+List<Category> getalldata(){
+    cs.getAllCategories();
+}
 }
