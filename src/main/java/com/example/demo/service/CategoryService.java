@@ -1,10 +1,15 @@
 package com.example.demo.service;
+import com.example.demo.entity.Category;
+import jakarta.persistence.Service;
+@Sevice
 public interface CategoryService{
-    Category createCategory(Category category){
+    public Category createCategory(Category category){
 
     }
-    Category getCategory(Long id){
+    public Category getCategory(Long id){
 
     }
-    List<Category> getAllCa
+    public List<Category> getAllCategories(){
+
+    }
 }
