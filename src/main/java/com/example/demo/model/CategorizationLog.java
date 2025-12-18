@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
 @Entity
-class CategorizationLog{
+public class CategorizationLog{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
