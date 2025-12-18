@@ -11,5 +11,7 @@ CategoryService cs;
 public Category postData(@RequestBody Category cty){
     return cs.createCategory(cty);
 }
-public Category 
+public List<Category> getAllCategory(@RequestBody Category cty){
+    return ;
+}
 }
