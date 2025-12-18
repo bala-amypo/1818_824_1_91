@@ -4,7 +4,7 @@ import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
-import jakarta.validation.constraint.NotNull;
+import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.PrePersist;
 @Entity
 public class UrgencyPolicy{
