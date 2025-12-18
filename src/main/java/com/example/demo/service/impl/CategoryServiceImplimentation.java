@@ -15,7 +15,7 @@ public class CategoryServiceImplimentation implements CategoryService{
     public List<Category> getAllCategories(){
         return obj.findAll();
     }
-    public Category getCategory(Long id){
-        return obj.findById(id);
+   public Category getCategory(Long id){
+        return obj.findById(id).;
     }
 }
