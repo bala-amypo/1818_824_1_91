@@ -16,6 +16,6 @@ public class CategoryServiceImplimentation implements CategoryService{
         return obj.findAll();
     }
     public Category getCategory(Long id){
-        return obj.findBy(id);
+        return obj.findById(id);
     }
 }
