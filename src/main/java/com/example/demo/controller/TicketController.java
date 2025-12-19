@@ -16,7 +16,7 @@ public class TicketController{
         return obj.createTicket(ti);
     }
     @GetMapping
-    public Ticket getall(){
-        
+    public List<Ticket> getall(){
+        return obj.getAllTicket();
     }
 }
