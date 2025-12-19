@@ -12,7 +12,7 @@
 //     public Ticket getTicket(Long id){
 //         return obj.getById(id).orElse(null);
 //     }
-//     public List<Category> getAllCategories(){
+//     public List<Category> getTicket(){
 //         return obj.findAll();
 //     }
 // }
