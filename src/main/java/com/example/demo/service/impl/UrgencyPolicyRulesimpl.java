@@ -1,7 +1,7 @@
 import com.example.demo.model.UrgencyPolicy;
 import com.example.demo.service.impl.UrgencyPolicyRules;
 import com.example.demo.service.repository.UrgecyPolicyrepo;
-import
+import org.springframework.factory.
 class UrgencyPolicyRulesimpl inplementation UrgencyPolicy{
     public Urgencypolicy createPolicy(UrgencyPolicy policy){
     }
