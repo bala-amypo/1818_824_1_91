@@ -1,2 +1,5 @@
 package com.example.demo.service.impl;
-public interface Categori 
+import com.example.demo.model.CategorizationRule;
+public interface CategorizationRuleservice{
+    public 
+} 
