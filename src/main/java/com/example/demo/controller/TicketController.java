@@ -14,5 +14,9 @@ public class TicketController{
     @PostMapping("/ticket")
     public Ticket create(@RequestBody Ticket ti){
         return obj.createTicket(ti);
-    } 
+    }
+    @GetMapping
+    public Ticket getall(){
+        
+    }
 }
