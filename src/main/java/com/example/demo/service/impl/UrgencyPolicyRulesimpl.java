@@ -7,13 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 class UrgencyPolicyRulesimpl inplementation UrgencyPolicy{
     @Autowired
-    
+    UrgencyPolicy obj;
     public Urgencypolicy createPolicy(UrgencyPolicy policy){
-        
+        obj.save(policy);
     }
     public List<Urgencypolicy> getAllpolicies(){
+        obj.findAll();
     }
     public Urgencypolicy getPolicy(Long id){
-
+        obj.findById(id).orElse(null);
     }
 }
