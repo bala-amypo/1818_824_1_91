@@ -8,7 +8,7 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
-import jakarta.
+import jakarta.validation.constraints.Size;
 @Entity
 public class Category{
     @Id
