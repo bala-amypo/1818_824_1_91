@@ -1,10 +1,12 @@
 import com.example.demo.model.UrgencyPolicy;
 import com.example.demo.service.impl.UrgencyPolicyRules;
+import com.example.demo.service.
 class UrgencyPolicyRulesimpl inplementation UrgencyPolicy{
-    public Urgencypolicy createPolicy(){
-
+    public Urgencypolicy createPolicy(UrgencyPolicy policy){
     }
     public List<Urgencypolicy> getAllpolicies(){
     }
-    public Urgencypolicy getPolicy(Long id);
+    public Urgencypolicy getPolicy(Long id){
+
+    }
 }
