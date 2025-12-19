@@ -8,5 +8,8 @@ import org.springframework.factory.beans.annotations.Autowired;
 @RestController
 class UrgencyPolicycontroller{
 @Autowired
-
+UrgencyPolicyService obj;
+UrgencyPolicy thecreatePolicy{
+    obj.createPolicy(UrgencyPolicy policy);
+}
 }
