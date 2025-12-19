@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.sprungFramework.web.bind.annotation.RequestBody;
+import org.springFramework.web.bind.annotation.RequestBody;
 @RestController
-public class TicketController extends TicketService{
+public class TicketController{
     @Autowired
     TicketService obj;
     @PostMapping("/ticket")
