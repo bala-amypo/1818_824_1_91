@@ -6,8 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
+import jakarta.
 @Entity
 public class Category{
     @Id
@@ -15,7 +16,7 @@ public class Category{
     private Long id;
     @Column(unique=true)
     private String categoryName;
-    @Size(min=10,message="desc must be minimum 10 charecters");
+    @Size(min=10,message="desc must be minimum 10 charecters")
     private String description;
     @NotBlank(message="no empty")
     private String defaultUrgency;
