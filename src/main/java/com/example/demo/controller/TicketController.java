@@ -22,6 +22,6 @@ public class TicketController{
     }
     @GetMapping("/{id}")
     public Ticket getid(@PathVariable Long id){
-        obj.fin
+        return obj.getTicket(id);
     }
 }
