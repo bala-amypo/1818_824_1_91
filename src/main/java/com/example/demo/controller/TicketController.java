@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.sprungFramework.web.bind.annotation.RequestBody;
-@RestController;
+@RestController
 public class TicketController extends TicketService{
     @Autowired
-    Tickets
+    TicketService obj;
     @PostMapping("/ticket")
     public Ticket create(@RequestBody Ticket ti){
-
+        return obj.createTicket(ti);
     } 
 }
