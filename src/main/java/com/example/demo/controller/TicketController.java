@@ -16,7 +16,7 @@ public class TicketController{
     public Ticket create(@RequestBody Ticket ti){
         return obj.createTicket(ti);
     }
-    @GetMapping
+    @GetMapping("/top")
     public List<Ticket> getall(){
         return obj.getAllTicket();
     }

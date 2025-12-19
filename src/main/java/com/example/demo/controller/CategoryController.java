@@ -17,11 +17,11 @@ public Category postData(@RequestBody Category cty){
     return cs.createCategory(cty);
 }
 @GetMapping("/cat")
-List<Category> getData(){
+public List<Category> getData(){
     return cs.getAllCategories();
 }
 @GetMapping("/{id}")
-Category getIdData(@PathVariable Long id){
+public Category getIdData(@PathVariable Long id){
     return cs.getCategory(id);
 }
 }
