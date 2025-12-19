@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class TicketController{
     @Autowired
@@ -18,5 +19,9 @@ public class TicketController{
     @GetMapping
     public List<Ticket> getall(){
         return obj.getAllTicket();
+    }
+    @GetMapping("/{id}")
+    public Ticket getid(@PathVariable Long id){
+        obj.fin
     }
 }
