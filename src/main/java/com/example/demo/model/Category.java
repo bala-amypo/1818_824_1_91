@@ -15,9 +15,9 @@ public class Category{
     private Long id;
     @Column(unique=true)
     private String categoryName;
-    @Size()
+    @Size(min=10,message="desc must be minimum 10 charecters");
     private String description;
-    @NotNull(message="No empty")
+    @NotBlank(message="no empty")
     private String defaultUrgency;
     private LocalDateTime createdAt;
     @PrePersist
@@ -50,7 +50,7 @@ public class Category{
     public void setDefaultUrgency(String defaultUrgency){
         this.defaultUrgency=defaultUrgency;
     }
-    public LocalDateTime getcreatedAt(){
+    public LocalDateTime getCreatedAt(){
         return createdAt;
     }
       public void setCreatedAt(LocalDateTime createdAt){
