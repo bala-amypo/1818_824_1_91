@@ -1,6 +1,6 @@
 import org.springframework.stereotype.Service;
 import com.example.demo.model.Ticket;
-import com.example.demo.service.TicektService;
+import com.example.demo.service.impl.TicketService;
 import com.example.demo.repository.Ticketrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
