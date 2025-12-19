@@ -1,5 +1,6 @@
 import org.springframework.stereotype.Service;
 import com.example.demo.model.Ticket;
+import com.example.service.Ticketservice;
 import com.example.demo.repository.Ticketrepo;
 import org.springframework.beans.factory.annotation.Autowired;
 @Service
@@ -10,7 +11,7 @@ Ticketrepo obj;
         return obj.save(Ticket);
     }
     public Ticket getTicket(Long id){
-        return obj.getById(id).or Else(null);
+        return obj.findById(id).orElse(null);
     }
     public List<Ticket> getTicket(){
         return obj.findAll();
