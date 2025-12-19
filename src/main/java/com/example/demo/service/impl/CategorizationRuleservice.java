@@ -3,6 +3,6 @@ import com.example.demo.model.CategorizationRule;
 
 public interface CategorizationRuleservice{
     public CategorizationRule createRule(Long categoryId,CategorizationRule rule);
-    List<CategorizationRule> getRulesByCategory(Long categoryId);
-    CategorizationRule getRule(Long id);
+    public List<CategorizationRule> getRulesByCategory(Long categoryId);
+    public CategorizationRule getRule(Long id);
 } 
