@@ -1,8 +1,9 @@
 import org.springframework.stereotype.Service;
 import com.example.demo.model.Ticket;
-import com.example.service.Ticketservice;
+import com.example.demo.service.TicektService;
 import com.example.demo.repository.Ticketrepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 @Service
 class TicketServiceImplementation implements TicketService{
 @Autowired
