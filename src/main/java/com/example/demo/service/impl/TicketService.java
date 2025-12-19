@@ -4,5 +4,5 @@ import com.example.demo.model.Ticket;
 public interface TicketService{
     public Ticket createTicket(Ticket Ticket);
     public Ticket getTicket(Long id);
-    public List<Category> getAllTicket();
+    public List<Ticket> getAllTicket();
 }
