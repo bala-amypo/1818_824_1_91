@@ -15,7 +15,7 @@ public class Category{
     private Long id;
     @Column(unique=true)
     private String categoryName;
-    @Min(10)
+    @Size()
     private String description;
     @NotNull(message="No empty")
     private String defaultUrgency;
@@ -56,8 +56,7 @@ public class Category{
       public void setCreatedAt(LocalDateTime createdAt){
             this.createdAt=createdAt;
 }
-    public Category(Long id,String categoryName,String description,String defaultUrgency,LocalDateTime createdAt){
-        this.id=id;
+    public Category(String categoryName,String description,String defaultUrgency,LocalDateTime createdAt){
         this.categoryName=categoryName;
         this.description=description;
         this.defaultUrgency=defaultUrgency;
