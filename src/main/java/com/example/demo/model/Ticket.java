@@ -5,10 +5,15 @@ import org.hibernate.annotations.CreationTimestamp;
 import com.example.demo.model.Category;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.prepersisten
 import java.sql.Timestamp;
 @Entity
 public class Ticket{
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String fullName;
     private String location;
