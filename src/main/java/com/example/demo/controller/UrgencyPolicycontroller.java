@@ -1,3 +1,4 @@
+packge com.example.demo.controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class UrgencyPolicycontroller{
 @Autowired
 UrgencyPolicyservice obj;
+@PostMapping
 public UrgencyPolicy theCreatePolicy(@RequestBody UrgencyPolicy policy){
     return obj.createPolicy(policy);
 }
