@@ -21,7 +21,7 @@ public class UserController{
     public User GetUser(@PathVariable Long id){
         return obj.getUser(id);
     }
-    @GetMapping("{email}")
+    @GetMapping("/email/{email}")
     public User FindByEmail(@PathVariable String  email){
         return obj.findByEmail(email);
     }
