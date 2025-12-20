@@ -1,3 +1,4 @@
+package com.example.demo.service.impl;
 import com.example.demo.service.impl.Userservice;
 import com.example.demo.repository.Userrepo;
 import com.example.demo.model.User;
@@ -12,9 +13,9 @@ public class Userserviceimpl implements Userservice{
         return obj.save(user);
     }
     public User getUser(Long id){
-        return obj.findById(id);
+        return obj.findById(id).orElse(null);
     }
     public User findByEmail(String  Email){
-        return obj.findByEmail(Email);
+        return obj.findByEmail(Email).orElse(null);
     }
 }
