@@ -4,15 +4,20 @@ import java.util.List;
 import com.example.demo.service.UrgencyPolicyService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.srpingframework.web.bind.annotation.PostMapping;
+import org.srpingframework.web.bind.annotation.RequestBody;
 import org.springframework.factory.beans.annotations.Autowired;
 @RestController
 class UrgencyPolicycontroller{
 @Autowired
 UrgencyPolicyService obj;
-public UrgencyPolicy thecreatePolicy{
-    obj.createPolicy(UrgencyPolicy policy);
+public UrgencyPolicy theCreatePolicy(@RequestBody policy){
+    return obj.createPolicy(UrgencyPolicy policy);
 }
-public UrgencyPolicy{
-    
+@GetMapping("/{id}")
+public UrgencyPolicy getPolicy(@PathVariable Long id){
+    return obj.getpolicy(id);
+}
+public List<UrgencyPolicy> getPol(){
+    return obj.getPolicy();
 }
 }
