@@ -16,7 +16,7 @@ public class Ticket{
     @CreationTimestamp
     private Timestamp createdAt;
     @ManyToOne
-    @JoinColumn("category_id",nullable=true)
+    @JoinColumn(name="category_id",nullable=true)
     private Category assignedCategory;
     private String urgencyLevel;
     public Long getId(){
@@ -43,13 +43,13 @@ public class Ticket{
     public void setCreatedBy(String createdBy){
         this.createdBy=createdBy;
     }
-    public String getAssignedcategory(){
+    public Category getAssignedcategory(){
         return assignedCategory;
     }
     public void setAssignedCtaegory(String assignedCategory){
         this.assignedCategory=assignedCategory;
     }
-    public String getUrgencyLevel(){
+    public Category getUrgencyLevel(){
         return urgencyLevel;
     }
     public void setUrgencyLevel(String urgencyLevel){
@@ -61,7 +61,7 @@ public class Ticket{
     public void setCreatedAt(Timestamp createdAt){
         this.createdAt=createdAt;
     }
-    public Ticket(Long id,String fullName,String Loaction,String createdBy,Timestamp createdAt,String assignedCategory,String urgencyLevel){
+    public Ticket(Long id,String fullName,String Loaction,String createdBy,Timestamp createdAt,Category assignedCategory,String urgencyLevel){
         this.id=id;
         this.location=location;
         this.createdBy=createdBy;
