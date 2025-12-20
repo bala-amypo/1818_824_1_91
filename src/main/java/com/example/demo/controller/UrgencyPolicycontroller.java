@@ -5,7 +5,7 @@ import com.example.demo.service.UrgencyPolicyservice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.srpingframework.web.bind.annotation.PostMapping;
 import org.srpingframework.web.bind.annotation.RequestBody;
-import org.springframework.factory.beans.annotation.Autowired;
+import org.springframework.beans..annotation.Autowired;
 @RestController
 class UrgencyPolicycontroller{
 @Autowired
