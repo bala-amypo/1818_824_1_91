@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 public class Userserviceimpl implements Userservice{
     @Autowired
     Userrepo obj;
-    public User register(User user){
+    User register(User user){
         return obj.save(user);
     }
-    public User getUser(Long id){
+    User getUser(Long id){
         return obj.findById(id);
     }
-    public User findByEmail(String  Email){
+    User findByEmail(String  Email){
         return obj.findByEmail(Email);
     }
 }
