@@ -14,7 +14,7 @@ public class Ticket{
     @CreationTimestamp
     private Timestamp createdAt;
     @ManytoOne
-    join
+    JoinColumn("category_id");
     private String assignedCategory;
     private String urgencyLevel;
     public Long getId(){
