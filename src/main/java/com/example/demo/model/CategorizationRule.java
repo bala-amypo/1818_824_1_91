@@ -7,12 +7,13 @@ import java.time.LocalDateTime;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
+import jaka
 @Entity
 public class CategorizationRule{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    
+
     private String category;
     @NotNull(message="This Feild is Recquired")
     private String keyword;
