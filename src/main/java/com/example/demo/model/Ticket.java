@@ -49,7 +49,7 @@ public class Ticket{
     public void setAssignedCtaegory(Category assignedCategory){
         this.assignedCategory=assignedCategory;
     }
-    public Category getUrgencyLevel(){
+    public String getUrgencyLevel(){
         return urgencyLevel;
     }
     public void setUrgencyLevel(String urgencyLevel){
