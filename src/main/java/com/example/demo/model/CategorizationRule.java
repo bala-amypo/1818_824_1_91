@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import 
 
 @Entity
 public class CategorizationRule{
@@ -16,7 +17,7 @@ public class CategorizationRule{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColum()
+    @JoinColum(name="category_id")
     private String category;
     @NotNull(message="This Feild is Recquired")
     private String keyword;
