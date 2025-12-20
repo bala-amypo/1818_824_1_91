@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @Service
-class UrgencyPolicyserviceimpl implements UrgencyPolicyservice{
+public class UrgencyPolicyserviceimpl implements UrgencyPolicyservice{
     @Autowired
     UrgencyPolicyrepo obj;
     public UrgencyPolicy createPolicy(UrgencyPolicy policy){
