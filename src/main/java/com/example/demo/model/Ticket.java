@@ -8,8 +8,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
-import jakarta.prepersisten
-import java.sql.Timestamp;
+import jakarta.persistence.PrePersist;
+import java.time.LocalDateTime;
 @Entity
 public class Ticket{
     @Id
@@ -18,12 +18,17 @@ public class Ticket{
     private String fullName;
     private String location;
     private String createdBy;
-    @CreationTimestamp
-    private Timestamp createdAt;
+    private LocalDateTime createdAt;
     @ManyToOne
     @JoinColumn(name="category_id",nullable=true)
     private Category assignedCategory;
     private String urgencyLevel;
+    @PrePersist
+    void ch(){
+    if(createdAt==null){
+        createdAt=LocalDateTime.Now();
+    }
+    }
     public Long getId(){
         return id;
     }
