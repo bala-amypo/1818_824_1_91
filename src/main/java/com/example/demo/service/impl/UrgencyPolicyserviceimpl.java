@@ -9,13 +9,13 @@ import java.util.List;
 class UrgencyPolicyserviceimpl implements UrgencyPolicyservice{
     @Autowired
     UrgencyPolicyrepo obj;
-    public Urgencypolicy createPolicy(UrgencyPolicy policy){
+    public UrgencyPolicy createPolicy(UrgencyPolicy policy){
         return  obj.save(policy);
     }
-    public List<Urgencypolicy> getAllpolicies(){
+    public List<UrgencyPolicy> getAllpolicies(){
         return obj.findAll();
     }
-    public Urgencypolicy getPolicy(Long id){
+    public UrgencyPolicy getPolicy(Long id){
         return obj.findById(id).orElse(null);
     }
 }
