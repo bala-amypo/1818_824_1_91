@@ -1,5 +1,5 @@
 package com.example.demo.service.impl;
-import com
+import com.example.demo.model.UrgencyPolicy;
 import java.util.List;
 public interface UrgencyPolicyservice{
     Urgencypolicy createPolicy(UrgencyPolicy policy);
