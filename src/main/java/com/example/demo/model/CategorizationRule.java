@@ -9,7 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
-import 
+import com.example.demo.model.Category;
 
 @Entity
 public class CategorizationRule{
@@ -18,7 +18,7 @@ public class CategorizationRule{
     private Long id;
     @ManyToOne
     @JoinColum(name="category_id")
-    private String category;
+    private Category category;
     @NotNull(message="This Feild is Recquired")
     private String keyword;
     private String matchType;
@@ -31,10 +31,10 @@ public class CategorizationRule{
             createdAt=LocalDateTime.now();
         }
     }
-    public void setCategory(String category){
+    public void setCategory(Category category){
         this.category=category;
         }
-    public String getCategory(){
+    public Category getCategory(){
         return category;
     }
     public void setKeyword(String keyword){
@@ -61,7 +61,7 @@ public class CategorizationRule{
     public LocalDateTime getCreatedAt(){
         return createdAt;
 }
-public CategorizationRule(Long id,String category,String keyword,String matchType,int priority,LocalDateTime createdAt){
+public CategorizationRule(Long id,Category category,String keyword,String matchType,int priority,LocalDateTime createdAt){
 this.id=id;
 this.category=category;
 this.keyword=keyword;
