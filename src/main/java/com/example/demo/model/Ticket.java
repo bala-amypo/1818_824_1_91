@@ -4,8 +4,7 @@ import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
 import com.example.demo.model.Category;
 import jakarta.persistence.JoinColumn;
-import jakarta.persitence.ManytoOne;
-import jakarta.persistence.
+import jakarta.persistence.ManyToOne;
 import java.sql.Timestamp;
 @Entity
 public class Ticket{
@@ -16,9 +15,9 @@ public class Ticket{
     private String createdBy;
     @CreationTimestamp
     private Timestamp createdAt;
-    @ManytoOne
-    JoinColumn("category_id",nullable=true);
-    private String assignedCategory;
+    @ManyToOne
+    @JoinColumn("category_id",nullable=true)
+    private Category assignedCategory;
     private String urgencyLevel;
     public Long getId(){
         return id;
