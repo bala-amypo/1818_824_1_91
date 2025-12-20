@@ -18,6 +18,7 @@ public UrgencyPolicy theCreatePolicy(@RequestBody UrgencyPolicy policy){
 public UrgencyPolicy getPolicy(@PathVariable Long id){
     return obj.getpolicy(id);
 }
+@GetMapping
 public List<UrgencyPolicy> getPol(){
     return obj.getPolicy();
 }
