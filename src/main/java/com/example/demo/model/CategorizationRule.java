@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
-import jaka
+import jakarta.persistence.ManyToOne;
+import jakarta.
 @Entity
 public class CategorizationRule{
     @Id
