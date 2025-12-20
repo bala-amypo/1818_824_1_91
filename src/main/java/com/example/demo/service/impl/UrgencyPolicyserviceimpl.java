@@ -1,8 +1,9 @@
 import com.example.demo.model.UrgencyPolicy;
-import com.example.demo.service.impl.UrgencyPolicyRules;
+import com.example.demo.service.impl.UrgencyPolicyservice;
 import com.example.demo.service.repository.UrgencyPolicyrepo;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
 @Service
 class UrgencyPolicyserviceimpl implements UrgencyPolicyservice{
