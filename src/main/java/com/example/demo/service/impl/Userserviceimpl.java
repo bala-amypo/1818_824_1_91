@@ -1,5 +1,6 @@
 import com.example.demo.service.impl.Userservice;
-import com.example.demo.model.Userrepo;
+import com.example.demo.repository.Userrepo;
+import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,12 +9,12 @@ public class Userserviceimpl implements Userservice{
     @Autowired
     Userrepo obj;
     public User register(User user){
-        obj.save(user);
+        return obj.save(user);
     }
     public User getUser(Long id){
-        obj.findById(id);
+        return obj.findById(id);
     }
     public User findByEmail(String  Email){
-        obj.findByEmail(Email);
+        return obj.findByEmail(Email);
     }
 }
