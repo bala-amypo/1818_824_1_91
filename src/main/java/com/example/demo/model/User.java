@@ -6,11 +6,11 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.PrePersist;
 import java.time.LocalDateTime;
 import jakarta.persistence.GenerationType;
-import jakarta.persistance.GeneratedValue;
+import jakarta.persistence.GeneratedValue;
 @Entity
 public class User{
     @Id
-    @GeneratedValue(strategy=GenerationType.Identity)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String fullName;
     @Column(unique=true)
