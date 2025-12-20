@@ -5,7 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import com.example.demo.model.Category;
 import jakarta.persistence.JoinColumn;
 import jakarta.persitence.ManytoOne;
-
+import jakarta.persistence.
 import java.sql.Timestamp;
 @Entity
 public class Ticket{
