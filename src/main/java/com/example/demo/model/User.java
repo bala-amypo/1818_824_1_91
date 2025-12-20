@@ -5,6 +5,8 @@ import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.PrePersist;
 import java.time.LocalDateTime;
+import jakarta.persistence.GenarationType;
+import 
 @Entity
 public class User{
     @Id
