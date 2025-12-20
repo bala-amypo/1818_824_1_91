@@ -10,7 +10,7 @@ import org.springframework.factory.beans.annotations.Autowired;
 class UrgencyPolicycontroller{
 @Autowired
 UrgencyPolicyService obj;
-public UrgencyPolicy theCreatePolicy(@RequestBody policy){
+public UrgencyPolicy theCreatePolicy(@RequestBody Urg policy){
     return obj.createPolicy(UrgencyPolicy policy);
 }
 @GetMapping("/{id}")
