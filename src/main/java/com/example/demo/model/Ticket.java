@@ -1,9 +1,7 @@
 package com.example.demo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import org.hibernate.annotations.CreationTimestamp;
 import com.example.demo.model.Category;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.GenerationType;
