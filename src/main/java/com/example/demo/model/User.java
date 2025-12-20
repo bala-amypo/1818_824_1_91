@@ -5,11 +5,12 @@ import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.PrePersist;
 import java.time.LocalDateTime;
-import jakarta.persistence.GenarationType;
-import 
+import jakarta.persistence.GenerationType;
+import jakarta.persistance.GeneratedValue;
 @Entity
 public class User{
     @Id
+    @GeneratedValue(strategy=GenerationType.Identity)
     private Long id;
     private String fullName;
     @Column(unique=true)
