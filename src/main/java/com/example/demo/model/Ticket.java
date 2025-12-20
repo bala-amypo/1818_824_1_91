@@ -2,6 +2,7 @@ package com.example.demo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import org.hibernate.annotations.CreationTimestamp;
+import com.example.demo.model.Category;
 import java.sql.Timestamp;
 @Entity
 public class Ticket{
@@ -12,6 +13,8 @@ public class Ticket{
     private String createdBy;
     @CreationTimestamp
     private Timestamp createdAt;
+    @ManytoOne
+    join
     private String assignedCategory;
     private String urgencyLevel;
     public Long getId(){
