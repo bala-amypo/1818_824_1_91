@@ -17,12 +17,12 @@ public class UserController{
     public User Register(@RequestBody User user){
         return obj.register(user);
     }
-    @GetMapping("/users/id/{id}")
+    @GetMapping("{id}")
     public User GetUser(@PathVariable Long id){
         return obj.getUser(id);
     }
-    @GetMapping("/users/email/{email}")
-    public User FindByEmail(@PathVariable("email") String  email){
+    @GetMapping("{email}")
+    public User FindByEmail(@PathVariable String  email){
         return obj.findByEmail(email);
     }
 }
