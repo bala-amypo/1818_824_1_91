@@ -1,11 +1,11 @@
-import org.srpingframework.web.bind.annotation.RestController;
-import org.srpingframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
-import com.example.demo.service.UrgencyPolicyservice;
+import com.example.demo.service.impl.UrgencyPolicyservice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.srpingframework.web.bind.annotation.PostMapping;
 import org.srpingframework.web.bind.annotation.RequestBody;
-import org.springframework.beans..annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 class UrgencyPolicycontroller{
 @Autowired
