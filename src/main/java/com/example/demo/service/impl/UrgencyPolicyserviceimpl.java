@@ -5,7 +5,7 @@ import org.springframework.sterotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
-class UrgencyPolicyRulesimpl implements UrgencyPolicy{
+class UrgencyPolicyserviceimpl implements UrgencyPolicyservice{
     @Autowired
     UrgencyPolicyrepo obj;
     public Urgencypolicy createPolicy(UrgencyPolicy policy){
