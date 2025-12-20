@@ -69,7 +69,7 @@ public class Ticket{
     public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt=createdAt;
     }
-    public Ticket(Long id,String fullName,String Loaction,LocalDateTime createdBy,Timestamp createdAt,Category assignedCategory,String urgencyLevel){
+    public Ticket(Long id,String fullName,String Loaction,String createdBy,LoacleDateTime createdAt,Category assignedCategory,String urgencyLevel){
         this.id=id;
         this.location=location;
         this.createdBy=createdBy;
