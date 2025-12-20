@@ -1,5 +1,5 @@
-package com.example.demo.service;
-import com.example.demo.model.user;
+package com.example.demo.service.;
+import com.example.demo.model.User;
 public interface Userservice{
     public User register(User user);
     public User getUser(Long id);

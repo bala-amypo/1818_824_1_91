@@ -8,7 +8,7 @@ public class Userserviceimpl implements Userservice{
     @Autowired
     Userrepo obj;
     public User register(User user){
-        obj.save(user)
+        obj.save(user);
     }
     public User getUser(Long id){
         obj.findById(id);
