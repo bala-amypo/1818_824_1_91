@@ -21,22 +21,22 @@ public class User{
             createdAt=LocalDateTime.now();
         }
     }
-    Long getId(){
+    public Long getId(){
         return id;
     }
-    String getFullname(){
+    public String getFullName(){
         return fullName;
     }
-    String getEmail(){
+    public String getEmail(){
         return email;
     }
-    String getPassword(){
+    public String getPassword(){
         return password;
     }
-    String getRole(){
+    public String getRole(){
         return role;
     }
-    LocalDateTime getCreatedAt(){
+    public LocalDateTime getCreatedAt(){
         return createdAt;
     }
     public void setId(Long id){
