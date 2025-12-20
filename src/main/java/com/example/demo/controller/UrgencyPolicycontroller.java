@@ -6,7 +6,7 @@ import com.example.demo.service.impl.UrgencyPolicyservice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 class UrgencyPolicycontroller{
@@ -17,10 +17,10 @@ public UrgencyPolicy theCreatePolicy(@RequestBody UrgencyPolicy policy){
 }
 @GetMapping("/{id}")
 public UrgencyPolicy getPolicy(@PathVariable Long id){
-    return obj.getpolicy(id);
+    return obj.getPolicy(id);
 }
 @GetMapping
 public List<UrgencyPolicy> getPol(){
-    return obj.getPolicy();
+    return obj.getAllpolicies();
 }
 }
