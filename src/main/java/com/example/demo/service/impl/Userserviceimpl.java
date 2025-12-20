@@ -13,5 +13,7 @@ public class Userserviceimpl implements Userservice{
     public User getUser(Long id){
         obj.findById(id);
     }
-    
+    public User findByEmail(String  Email){
+        obj.findByEmail(Email);
+    }
 }
