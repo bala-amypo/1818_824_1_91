@@ -15,13 +15,13 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
     @Autowired
     Ticketrepo obj2; 
     public Ticket categorizeTicket(Long ticketid){
-        return obj2.findById(ticketid);
+        return obj2.findById(ticketid).orElse(null);
 
     }
     public List<CategorizationLog> getLogsForTicket(Long ticketid){
         return obj1.findByTicketId(ticketid);
     }
     public CategorizationLog getLog(Long id){
-        return obj1.findById(id);
+        return obj1.findById(id).orElse(null);
     }
 }
