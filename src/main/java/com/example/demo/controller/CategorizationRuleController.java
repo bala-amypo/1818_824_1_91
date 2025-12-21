@@ -21,7 +21,7 @@ class CategrizationRuleController{
     List<CategorizationRule> GetRule(@PathVariable Long categoryId){
         return obj.getRulesByCategory(categoryId);
     }
-    @GetMapping("ruleid/{id}")
+    @GetMapping("/ruleid/{id}")
     CategorizationRule gettingRule(@PathVariable Long id){
         return obj.getRule(id);
     }
