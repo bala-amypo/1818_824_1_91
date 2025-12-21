@@ -10,7 +10,6 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 import com.example.demo.model.Category;
-
 @Entity
 public class CategorizationRule{
     @Id
