@@ -17,11 +17,12 @@ class CategrizationRuleController{
     CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
         return obj.createRule(CategoryId,rule);
     }
-    @GetMapping()
-    List<CategorizationRule> GetRule(Long categoryId){
+    @GetMapping("/id/{CategoryId}")
+    List<CategorizationRule> GetRule(@PathVariable Long categoryId){
         return obj.getRulesByCategory(categoryId);
     }
-    CategorizationRule gettingRule(Long id){
+    @GetMapping("ruleid/{id}")
+    CategorizationRule gettingRule(@PathVariable Long id){
         return obj.getRule(id);
     }
 }
