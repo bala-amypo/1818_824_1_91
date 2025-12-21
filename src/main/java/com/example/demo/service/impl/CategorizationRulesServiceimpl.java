@@ -13,14 +13,14 @@ class CategorizatrionRulesServiceimpl implements CategorizationRuleservice{
     Categoryrepo ob;
     public CategorizationRule createRule(Long categoryId,CategorizationRule rule){
         Category category=ob.findById(categoryId)
-            .orElseThrow(()->new RunTimeException("No Id Found"));
+            .orElseThrow(()->new RuntimeException("No Id Found"));
         rule.setCategory(category);
         obj.save(rule);
     }
     public List<CategorizationRule> getRulesByCategory(Long categoryId){
-        return obj.findByCategoryId(categoryId);
+        return obj.findByCategoryId(categoryId).orElse(null);
     }
     public CategorizationRule getRule(Long id){
-        return obj.findById(id);
+        return obj.findById(id).orElse(null);
     }
 }
