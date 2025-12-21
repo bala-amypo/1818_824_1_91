@@ -31,13 +31,13 @@ public class CategorizationLog{
             createdAt=LocalDateTime.now();
         }
     }
-    public Long getId(){
+    public Ticket getId(){
         return id;
     }
-    public String getTicket(){
+    public Ticket getTicket(){
         return ticket;
     }
-    public String getAppliedRule(){
+    public CategorizationRule getAppliedRule(){
         return appliedRule;
     }
     public String getMatchedKeyword(){
@@ -52,10 +52,10 @@ public class CategorizationLog{
     public LocalDateTime getCreatedAt(){
         return createdAt;
     }
-    public void setTicket(String ticket){
+    public void setTicket(Ticket ticket){
         this.ticket=ticket;
     }
-    public void setAppliedRule(String appliedRule){
+    public void setAppliedRule(CategorizationRule appliedRule){
         this.appliedRule=appliedRule;
     }
     public void setMatchedKeyword(String matchedKeyword){
@@ -70,7 +70,7 @@ public class CategorizationLog{
     public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt=createdAt;
     }
-    public CategorizationLog(Long id,LocalDateTime createdAt,String ticket,String appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
+    public CategorizationLog(Long id,LocalDateTime createdAt,Ticket ticket,CategorizationRule appliedRule,String matchedKeyword,String assignedCategory,String assignedUrgency){
         this.ticket=ticket;
         this.createdAt=createdAt;
         this.appliedRule=appliedRule;
