@@ -31,7 +31,7 @@ public class CategorizationLog{
             createdAt=LocalDateTime.now();
         }
     }
-    public Ticket getId(){
+    public Long getId(){
         return id;
     }
     public Ticket getTicket(){
