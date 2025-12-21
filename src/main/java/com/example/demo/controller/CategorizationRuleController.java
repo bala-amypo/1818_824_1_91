@@ -1,3 +1,4 @@
+package com.example.demo.controller;
 import com.example.demo.service.impl.CategorizationRuleservice;
 import com.example.demo.model.CategorizationRule;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +13,12 @@ class CategrizationRuleController{
     @Autowired
     CategorizationRuleservice obj;
     CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
-        return createRule(categoryId,rule);
+        return obj.createRule(CategoryId,rule);
     }
     List<CategorizationRule> GetRule(Long categoryId){
-        return getRulesByCategory(categoryId);
+        return obj.getRulesByCategory(categoryId);
     }
     CategorizationRule gettingRule(Long id){
-        return getRule(id);
+        return obj.getRule(id);
     }
 }
