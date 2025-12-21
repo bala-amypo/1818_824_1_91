@@ -23,6 +23,6 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
         obj1.getByTicketId(ticketid);
     }
     public CategorizationLog getLog(Long id){
-
+        obj1.getById(id);
     }
 }
