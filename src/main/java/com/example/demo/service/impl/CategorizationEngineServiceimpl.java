@@ -16,12 +16,11 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
     @Autowired
     CategorizationLogrepo obj3; 
     public Ticket categorizeTicket(Long ticketid){
-        return Ticket ti=obj2.findById(ticketid)
-        .
+        obj2.getById(ticketid);
 
     }
     public List<CategorizationLog> getLogsForTicket(Long ticketid){
-
+        obj1.
     }
     public CategorizationLog getLog(Long id){
 
