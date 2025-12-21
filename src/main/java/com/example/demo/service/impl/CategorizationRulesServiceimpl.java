@@ -7,7 +7,10 @@ class CategorizatrionRulesServiceimpl implements CtaegorizationRuleService{
     @Autowired
     CategorizationRulerepo obj;
     public CategorizationRule createRule(Long categoryId,CategorizationRule rule){
-        
+        Category category=findById(categoryId)
+            .orElse(throw->newRunTi)
+        rule.category;
+
     }
     public List<CategorizationRule> getRulesByCategory(Long categoryId){
         return obj.findByCategoryId(categoryId);
