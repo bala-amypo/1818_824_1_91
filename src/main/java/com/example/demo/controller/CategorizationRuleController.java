@@ -12,10 +12,12 @@ import java.util.List;
 class CategrizationRuleController{
     @Autowired
     CategorizationRuleservice obj;
-    
+
+    @PostMapping("/kl")
     CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
         return obj.createRule(CategoryId,rule);
     }
+    @GetMapping()
     List<CategorizationRule> GetRule(Long categoryId){
         return obj.getRulesByCategory(categoryId);
     }
