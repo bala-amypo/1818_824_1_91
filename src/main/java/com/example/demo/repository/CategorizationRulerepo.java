@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 import com.example.demo.model.Category;
 public interface CategorizationRulerepo extends JpaRepository<CategorizationRule,Long>{
-    Optional<Category> findByCategoryId(Long CategoryId); 
+    List<Category> findByCategoryId(Long CategoryId); 
 }
