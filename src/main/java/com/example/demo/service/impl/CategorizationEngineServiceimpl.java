@@ -8,6 +8,7 @@ import com.example.demo.repository.Ticketrepo;
 import com.example.demo.repository.CategorizationLogrepo;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 public class  CategorizationEngineServiceimpl implements CategorizationEngineService{
     @Autowired
     CategorizationLogrepo obj1
@@ -16,13 +17,13 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
     @Autowired
     CategorizationLogrepo obj3; 
     public Ticket categorizeTicket(Long ticketid){
-        obj2.getById(ticketid);
+        return obj2.findById(ticketid);
 
     }
     public List<CategorizationLog> getLogsForTicket(Long ticketid){
-        obj1.getByTicketId(ticketid);
+        return obj1.findByTicketId(ticketid);
     }
     public CategorizationLog getLog(Long id){
-        obj1.getById(id);
+        return obj1.findById(id);
     }
 }
