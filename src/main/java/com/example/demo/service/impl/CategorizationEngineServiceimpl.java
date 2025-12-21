@@ -20,7 +20,7 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
 
     }
     public List<CategorizationLog> getLogsForTicket(Long ticketid){
-        obj1.
+        obj1.getByTicketId(ticketid);
     }
     public CategorizationLog getLog(Long id){
 
