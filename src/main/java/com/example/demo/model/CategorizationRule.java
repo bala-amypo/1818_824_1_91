@@ -17,7 +17,7 @@ public class CategorizationRule{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColum(name="category_id")
+    @JoinColumn(name="category_id")
     private Category category;
     @NotNull(message="This Feild is Recquired")
     private String keyword;
