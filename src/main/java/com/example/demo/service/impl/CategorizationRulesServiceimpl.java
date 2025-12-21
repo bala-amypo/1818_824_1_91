@@ -1,11 +1,12 @@
 package com.example.demo.service.impl;
 import java.util.List;
-import com.example.demo.service.impl.CategorizationRuleservice.java
+import com.example.demo.service.impl.CategorizationRuleservice;
 import com.example.demo.repository.CategorizationRulerepo;
-import com.example.demo.model.
+import com.example.demo.model.CategorizationRule;
+import com.example.demo.model.Category;
 import com.example.demo.repository.Categoryrepo;
 import org.springframework.beans.factory.annotation.Autowired;
-class CategorizatrionRulesServiceimpl implements CategorizationRuleService{
+class CategorizatrionRulesServiceimpl implements CategorizationRuleservice{
     @Autowired
     CategorizationRulerepo obj;
     @Autowired
