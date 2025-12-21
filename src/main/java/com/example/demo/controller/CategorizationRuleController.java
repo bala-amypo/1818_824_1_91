@@ -14,7 +14,7 @@ class CategrizationRuleController{
     CategorizationRuleservice obj;
 
     @PostMapping("/kl")
-    CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
+    CategorizationRule CreateRule(@PathVariable Long CategoryId,@RequestBody CategorizationRule rule){
         return obj.createRule(CategoryId,rule);
     }
     @GetMapping("/id/{CategoryId}")
