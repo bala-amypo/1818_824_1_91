@@ -12,7 +12,7 @@ class CategrizationRuleController{
     @Autowired
     CategorizationRuleservice obj;
     CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
-        return createRule(CategoryId,rule);
+        return createRule(categoryId,rule);
     }
     List<CategorizationRule> GetRule(Long categoryId){
         return getRulesByCategory(categoryId);
