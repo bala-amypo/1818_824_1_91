@@ -15,7 +15,10 @@ class CategrizationRuleController{
     CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
         return createRule(CategoryId,rule);
     }
-    List<CategorizationRule> GetRule(){
-        return 
+    List<CategorizationRule> GetRule(Long categoryId){
+        return getRulesByCategory(categoryId);
+    }
+    CategorizationRule gettingRule(Long id){
+        return getRule(id);
     }
 }
