@@ -4,7 +4,8 @@ import com.example.demo.model.Ticket;
 import com.example.demo.model.CategorizationLog;
 import com.example.demo.service.impl.CategorizationEngineService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import 
 import java.util.List;
 
 @RestController
