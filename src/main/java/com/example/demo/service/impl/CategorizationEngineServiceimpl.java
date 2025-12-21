@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import Categorizationlog
+import com.example.demo.repository.CategorizationLogrepo;
 import com.example.demo.service.impl.CategorizationEngineService;
 import com.example.demo.model.Ticket;
 import com.example.demo.model.CategorizationLog;
@@ -16,7 +16,9 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
     @Autowired
     CategorizationLogrepo obj3; 
     public Ticket categorizeTicket(Long ticketid){
-        Ticekt ti=
+        return Ticket ti=obj2.findById(ticketid)
+        .
+
     }
     public List<CategorizationLog> getLogsForTicket(Long ticketid){
 
