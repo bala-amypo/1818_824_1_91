@@ -11,6 +11,14 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
     @Autowired
     Ticketrepo obj
     @Autowired
-    CategorizationLogrepo ob;
-    public CategorizationRule createRule(Long categoryId,CategorizationRule rule)
+    CategorizationLogrepo ob; 
+    public Ticket categorizeTicket(Long ticketid){
+        
+    }
+    public List<CategorizationLog> getLogsForTicket(Long ticketid){
+
+    }
+    public CategorizationLog getLog(Long id){
+
+    }
 }
