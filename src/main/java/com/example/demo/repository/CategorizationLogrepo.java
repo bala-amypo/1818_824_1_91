@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import com.example.demo.model.Ticket;
 public interface CategorizationLogrepo extends JpaRepository<CategorizationLog,Long>{
-    public List<CategorizationLogrepo> getByTicketId(ticketid);
+    public List<CategorizationLogrepo> findByTicketId(Long ticketid);
 }
