@@ -12,6 +12,7 @@ import java.util.List;
 class CategrizationRuleController{
     @Autowired
     CategorizationRuleservice obj;
+    
     CategorizationRule CreateRule(Long CategoryId,CategorizationRule rule){
         return obj.createRule(CategoryId,rule);
     }
