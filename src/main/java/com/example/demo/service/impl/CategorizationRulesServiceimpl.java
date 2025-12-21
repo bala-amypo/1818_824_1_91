@@ -12,6 +12,6 @@ class CategorizatrionRulesServiceimpl implements CtaegorizationRuleService{
         return obj.findByCategoryId(categoryId);
     }
     public CategorizationRule getRule(Long id){
-
+        return obj.findByTd(id);
     }
 }
