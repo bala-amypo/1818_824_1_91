@@ -8,15 +8,19 @@ import jakarta.persistence.PrePersist;
 import com.example.demo.model.CategorizationRule;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
-import com.example.demo.model.ticket;
+import com.example.demo.model.Ticket;
 
 @Entity
 public class CategorizationLog{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String ticket;
-    private String appliedRule;
+    @ManyToOne
+    @JoinColumn(name="ticket_id")
+    private Ticket ticket;
+    @ManyToOne
+    @JoinColumn(name="appliedrule_id")
+    private CategorizationRule appliedRule;
     private String matchedKeyword;
     private String assignedCategory;
     private String assignedUrgency;
