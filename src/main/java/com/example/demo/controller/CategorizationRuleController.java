@@ -13,11 +13,11 @@ class CategrizationRuleController{
     @Autowired
     CategorizationRuleservice obj;
 
-    @PostMapping("/kl")
-    CategorizationRule CreateRule(@PathVariable Long CategoryId,@RequestBody CategorizationRule rule){
-        return obj.createRule(CategoryId,rule);
+    @PostMapping("/categories/{categoryId}/rules")
+    CategorizationRule CreateRule(@PathVariable Long categoryId,@RequestBody CategorizationRule rule){
+        return obj.createRule(categoryId,rule);
     }
-    @GetMapping("/id/{CategoryId}")
+    @GetMapping("/id/{categoryId}")
     List<CategorizationRule> GetRule(@PathVariable Long categoryId){
         return obj.getRulesByCategory(categoryId);
     }
