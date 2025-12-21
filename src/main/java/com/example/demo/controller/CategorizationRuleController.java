@@ -1,5 +1,15 @@
 import com.example.demo.service.impl.CategorizationRuleservice;
 import com.example.demo.model.CategorizationRule;
-import com.example.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
-import com.e
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@RestController
+class CategrizationRuleController{
+    @Autowired
+    CategorizationRuleservice obj;
+    
+}
