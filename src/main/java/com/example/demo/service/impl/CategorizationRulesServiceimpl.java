@@ -21,7 +21,7 @@ class CategorizatrionRulesServiceimpl implements CategorizationRuleservice{
         return obj.save(rule);
     }
     public List<CategorizationRule> getRulesByCategory(Long categoryId){
-        return obj.findByCategoryId(categoryId).orElse(null);
+        return obj.findByCategoryId(categoryId);
     }
     public CategorizationRule getRule(Long id){
         return obj.findById(id).orElse(null);
