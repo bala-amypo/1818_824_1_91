@@ -37,7 +37,16 @@ public class UrgencyPolicy{
     public String getKeyword(){
         return keyword;
     }
-    public String s
+    public void setKeyword(String keyword){
+        this.keyword=keyword;
+    }
+    public String getUrgencyOverride(){
+        return urgencyOverride;
+    }
+    public void setUrgencyOverride(String urgencyOverride){
+        this.urgencyOverride=urgencyOverride;
+    }
+    
     public UrgencyPolicy(Long id,String category,String keyword,String matchType,Long priority,LocalDateTime createdAt){
         this.id=id;
         this.category=category;
