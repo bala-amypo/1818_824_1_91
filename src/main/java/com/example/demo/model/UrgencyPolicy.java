@@ -46,18 +46,18 @@ public class UrgencyPolicy{
     public void setUrgencyOverride(String urgencyOverride){
         this.urgencyOverride=urgencyOverride;
     }
-    public LocalDateTime getLoggedAt(){
+    public LocalDateTime getCreatedAt(){
         return createdAt;
     }
-    public void setLoggedAt(LocalDateTime createdAt){
+    public void setCreateddAt(LocalDateTime createdAt){
         this.createdAt=createdAt;
     }
-    public UrgencyPolicy(Long id,String policyName,String keyword,String urgencyOverride,LocalDateTime loggedAt){
+    public UrgencyPolicy(Long id,String policyName,String keyword,String urgencyOverride,LocalDateTime createdAt){
         this.id=id;
         this.policyName=policyName;
         this.keyword=keyword;
         this.urgencyOverride=urgencyOverride;
-        this.loggedAt=loggedAt;
+        this.createdAt=createdAt;
     }
     public UrgencyPolicy(){}
 }

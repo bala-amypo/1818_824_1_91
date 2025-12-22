@@ -49,8 +49,8 @@ public class CategorizationLog{
     public String getAssignedUrgency(){
         return assignedUrgency;
     }
-    public LocalDateTime getCreatedAt(){
-        return createdAt;
+    public LocalDateTime loggedAt(){
+        return loggedAt;
     }
     public void setTicket(Ticket ticket){
         this.ticket=ticket;
