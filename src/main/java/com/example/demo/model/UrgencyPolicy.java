@@ -14,7 +14,7 @@ public class UrgencyPolicy{
     private String policyName;
     @NotNull(message="No Data")
     private String keyword;
-    private String UrgencyOverride;
+    private String urgencyOverride;
     private LocalDateTime createdAt;
     @PrePersist
     public void onCreate(){
@@ -52,11 +52,11 @@ public class UrgencyPolicy{
     public void setCreatedAt(){
     this.createdAt=createdAt;
     }
-    public UrgencyPolicy(Long id,String policyName,String keyword,String urgencyOveride,LocalDateTime createdAt){
+    public UrgencyPolicy(Long id,String policyName,String keyword,String urgencyOverride,LocalDateTime createdAt){
         this.id=id;
         this.policyName=policyName;
         this.keyword=keyword;
-        this.urgencyOveride=urgencyOveride;
+        this.urgencyOverride=urgencyOverride;
         this.createdAt=createdAt;
     }
     public UrgencyPolicy(){}

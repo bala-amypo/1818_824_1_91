@@ -24,10 +24,10 @@ public class CategorizationLog{
     private String matchedKeyword;
     private String assignedCategory;
     private String assignedUrgency;
-    private LocalDateTime createdAt;
+    private LocalDateTime loggedAt;
     @PrePersist
     public void onCreate(){
-        if(createdAt==null){
+        if(loggedAt==null){
             createdAt=LocalDateTime.now();
         }
     }
