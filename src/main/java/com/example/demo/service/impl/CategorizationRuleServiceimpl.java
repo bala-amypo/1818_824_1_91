@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 import java.util.List;
-import com.example.demo.service.impl.CategorizationRuleservice;
+import com.example.demo.service.CategorizationRuleservice;
 import com.example.demo.repository.CategorizationRulerepo;
 import com.example.demo.model.CategorizationRule;
 import com.example.demo.model.Category;
