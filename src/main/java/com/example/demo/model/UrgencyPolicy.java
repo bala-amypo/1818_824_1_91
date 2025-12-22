@@ -53,12 +53,6 @@ public class UrgencyPolicy{
     public LocalDateTime getCreatedAt(){
         return createdAt;
     }
-    public void setKeyword(String keyword){
-        this.keyword=keyword;
-    }
-    public String getKeyWord(){
-        return keyword;
-    }
     public UrgencyPolicy(Long id,String category,String keyword,String matchType,Long priority,LocalDateTime createdAt){
         this.id=id;
         this.category=category;
