@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.service.impl.CategorizationEngineService;
+import com.example.demo.service.CategorizationEngineService;
 import com.example.demo.model.Ticket;
 import com.example.demo.model.CategorizationLog;
 import com.example.demo.repository.Ticketrepo;
