@@ -30,6 +30,9 @@ public class CategorizationRule{
             createdAt=LocalDateTime.now();
         }
     }
+    public Long getId(){
+        return id;
+    }
     public void setCategory(Category category){
         this.category=category;
         }
