@@ -15,11 +15,11 @@ public class UrgencyPolicy{
     @NotNull(message="No Data")
     private String keyword;
     private String urgencyOverride;
-    private LocalDateTime loggedAt;
+    private LocalDateTime createdAt;
     @PrePersist
     public void onCreate(){
-        if(loggedAt==null){
-            loggedAt=LocalDateTime.now();
+        if(createdAt==null){
+            createdAt=LocalDateTime.now();
         }
     }
     public Long getId(){
@@ -47,10 +47,10 @@ public class UrgencyPolicy{
         this.urgencyOverride=urgencyOverride;
     }
     public LocalDateTime getLoggedAt(){
-        return loggedAt;
+        return createdAt;
     }
-    public void setLoggedAt(LocalDateTime loggedAt){
-        this.loggedAt=loggedAt;
+    public void setLoggedAt(LocalDateTime createdAt){
+        this.createdAt=createdAt;
     }
     public UrgencyPolicy(Long id,String policyName,String keyword,String urgencyOverride,LocalDateTime loggedAt){
         this.id=id;
