@@ -1,5 +1,5 @@
 package com.example.demo.controller;
-import com.example.demo.service.impl.CategorizationRuleservice;
+import com.example.demo.service.CategorizationRuleservice;
 import com.example.demo.model.CategorizationRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;

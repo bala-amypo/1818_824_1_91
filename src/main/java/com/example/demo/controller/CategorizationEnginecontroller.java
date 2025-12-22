@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Ticket;
 import com.example.demo.model.CategorizationLog;
-import com.example.demo.service.impl.CategorizationEngineService;
+import com.example.demo.service.CategorizationEngineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
