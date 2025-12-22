@@ -22,10 +22,22 @@ public class UrgencyPolicy{
             createdAt=LocalDateTime.now();
         }
     }
-    public Long setId(){
+    public Long getId(){
         return id;
     }
-    
+    public void setId(Long id){
+        this.id=id;
+    }
+    public String getPolicyName(){
+        return policyName;
+    }
+    public void setPolicyName(String policyName){
+        this.policyName=policyName;
+    }
+    public String getKeyword(){
+        return keyword;
+    }
+    public String s
     public UrgencyPolicy(Long id,String category,String keyword,String matchType,Long priority,LocalDateTime createdAt){
         this.id=id;
         this.category=category;
