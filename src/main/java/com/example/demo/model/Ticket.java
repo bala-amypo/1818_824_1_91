@@ -13,7 +13,7 @@ public class Ticket{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String fullName;
+    private String title;
     private String location;
     private String createdBy;
     private LocalDateTime createdAt;
@@ -33,11 +33,11 @@ public class Ticket{
     public void setId(Long id){
         this.id=id;
     }
-    public String getFullName(){
-        return fullName;
+    public String getTitle(){
+        return title;
     }
-    public void setFullName(){
-        this.fullName=fullName;
+    public void setTitle(){
+        this.title=title;
     }
     public String getLocation(){
         return location;
@@ -69,9 +69,9 @@ public class Ticket{
     public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt=createdAt;
     }
-    public Ticket(Long id,String fullName,String Loaction,String createdBy,LocalDateTime createdAt,Category assignedCategory,String urgencyLevel){
+    public Ticket(Long id,String title,String Loaction,String createdBy,LocalDateTime createdAt,Category assignedCategory,String urgencyLevel){
         this.id=id;
-        this.location=location;
+        this.title=title;
         this.createdBy=createdBy;
         this.createdAt=createdAt;
         this.assignedCategory=assignedCategory;

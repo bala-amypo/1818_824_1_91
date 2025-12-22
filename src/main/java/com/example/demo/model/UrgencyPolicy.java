@@ -56,6 +56,8 @@ public class UrgencyPolicy{
         this.id=id;
         this.policyName=policyName;
         this.keyword=keyword;
+        this.urgencyOveride=urgencyOveride;
+        this.createdAt=createdAt;
     }
     public UrgencyPolicy(){}
 }
