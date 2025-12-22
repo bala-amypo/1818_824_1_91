@@ -49,8 +49,8 @@ public class UrgencyPolicy{
     public LocalDateTime getLoggedAt(){
         return loggedAt;
     }
-    public void setLoggedAt(){
-    this.loggedAt=loggedAt;
+    public void setLoggedAt(LocalDateTime loggedAt){
+        this.loggedAt=loggedAt;
     }
     public UrgencyPolicy(Long id,String policyName,String keyword,String urgencyOverride,LocalDateTime loggedAt){
         this.id=id;
