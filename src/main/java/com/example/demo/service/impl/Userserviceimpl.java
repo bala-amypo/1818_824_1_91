@@ -33,10 +33,10 @@ public class Userserviceimpl implements Userservice{
             dat.setEmail(data.getEmail());
         }
         if(data.getFullName()!=null){
-            dat.setFullName(data.getFullName);
+            dat.setFullName(data.getFullName());
         }
         if(data.getPassword()!=null){
-            dat.setPassword(data.getPassword);
+            dat.setPassword(data.getPassword());
         }
         if(data.getRole()!=null){
             dat.setRole(data.getRole());
