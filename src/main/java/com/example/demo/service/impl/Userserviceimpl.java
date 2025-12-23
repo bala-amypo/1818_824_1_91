@@ -4,6 +4,7 @@ import com.example.demo.repository.Userrepo;
 import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.http.ResponseEntity;
 @Service
 public class Userserviceimpl implements Userservice{
     @Autowired
@@ -43,7 +44,7 @@ public class Userserviceimpl implements Userservice{
         }
        return obj.save(dat);
     }
-    public User deleteUser(String Abi){
+    public ResponseEntity<String> deleteUser(String Abi){
         User dat=obj.getByName(Abi);
     }
 }
