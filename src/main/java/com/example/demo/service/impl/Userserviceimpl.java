@@ -44,7 +44,7 @@ public class Userserviceimpl implements Userservice{
         }
        return obj.save(dat);
     }
-    public ResponseEntity<String> deleteUser(String Abi){
+    public void deleteUser(String Abi){
         User dat=obj.getByName(Abi);
     }
 }
