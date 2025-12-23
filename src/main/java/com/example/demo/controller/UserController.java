@@ -40,6 +40,7 @@ public class UserController{
         }
     @DeleteMapping("/delete/{Abi}")
     public ResponseEntity<String> deleteuser(@PathVariable String Abi){
-        return obj.deleteUser(Abi);
+        obj.deleteUser(Abi);
+        return ResponseEntity.ok("Deletion is Seucessfull");
     }
 }

@@ -47,8 +47,8 @@ public class Userserviceimpl implements Userservice{
     public void deleteUser(String Abi){
         User dat=obj.getByName(Abi);
         if(dat==null){
-            Throw(()->new RunTimeException("No "))
+            throw new 
         }
-        obj.delete(dat)
+        obj.delete(dat);
     }
 }
