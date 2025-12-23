@@ -20,7 +20,8 @@ public class Userserviceimpl implements Userservice{
     public User updateId(Long id,User data){
         User dat=obj.findById(id)
             .orElse(throw->new runtimeException("no id is found"));
-        obj.setFullName(data.name());
-        obj.set
+        obj.setFullName(data.getName());
+        obj.setEmail(data.getEmail());
+        obj.setPassword(data.getPassword())
     }
 }
