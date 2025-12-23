@@ -13,7 +13,7 @@ public class Userserviceimpl implements Userservice{
         return obj.save(user);
     }
     public User getUser(Long id){
-        User use=obj.findById(id);
+        User use=obj.findById(id).orElse(null);
         if(use==null){
             throw new RuntimeException("No id Exist");
         }
