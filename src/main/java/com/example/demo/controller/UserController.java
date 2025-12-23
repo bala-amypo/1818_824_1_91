@@ -28,6 +28,6 @@ public class UserController{
     }
     @PutMapping("/updata/{id}")
     public User UpdateById(@PathVariable Long id,@RequestBody User data){
-        return obj.updateById(Long id);
+        return obj.updateById(id);
     }
 }
