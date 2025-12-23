@@ -19,12 +19,11 @@ public class Userserviceimpl implements Userservice{
     }
     public User updateId(Long id,User data){
         User dat=obj.findById(id)
-            .orElse(throw->new runtimeException("no id is found"));
-        obj.setFullName(data.getName());
-        obj.setEmail(data.getEmail());
-        obj.setPassword(data.getPassword());
-        obj.setRole(data.getRole());
-        obj.setCreatedAt(data.getCreatedAt());
-        obj
+            .orElse(()->throw new runtimeException("no id is found"));
+        dat.setFullName(data.getName());
+        dat.setEmail(data.getEmail());
+        dat.setPassword(data.getPassword());
+        dat.setRole(data.getRole());
+        return obj.save(dat);
     }
 }
