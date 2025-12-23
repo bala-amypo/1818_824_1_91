@@ -19,8 +19,8 @@ public class Userserviceimpl implements Userservice{
     }
     public User updateId(Long id,User data){
         User dat=obj.findById(id)
-            .orElse(()->throw new runtimeException("no id is found"));
-        dat.setFullName(data.getName());
+            .orElseThrow(()->new RunTimeException("no id is found"));
+        dat.setFullName(data.getFullName());
         dat.setEmail(data.getEmail());
         dat.setPassword(data.getPassword());
         dat.setRole(data.getRole());
