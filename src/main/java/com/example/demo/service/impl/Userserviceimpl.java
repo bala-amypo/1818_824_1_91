@@ -28,7 +28,13 @@ public class Userserviceimpl implements Userservice{
     }
     public User UpateMin(Long id,User data){
         User dat=obj.findById(data)
-            .
-        if(data.setEmail()!=)
+            .orElseThrow(()->new RuntimeException("No id is found"));
+        if(data.getEmail()!=null){
+            obj.setEmail(dat.getEmail());
+        }
+        if(data.getFullName()!=null){
+            obj.setFullName(dat.getFullName);
+        }
+        if(data.get)
     }
 }
