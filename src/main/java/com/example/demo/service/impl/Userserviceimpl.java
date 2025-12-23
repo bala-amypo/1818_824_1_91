@@ -27,19 +27,19 @@ public class Userserviceimpl implements Userservice{
         return obj.save(dat);
     }
     public User UpateMin(Long id,User data){
-        User dat=obj.findById(data)
+        User dat=obj.findById(id)
             .orElseThrow(()->new RuntimeException("No id is found"));
         if(data.getEmail()!=null){
-            dat.setEmail(dat.getEmail());
+            dat.setEmail(data.getEmail());
         }
         if(data.getFullName()!=null){
-            dat.setFullName(dat.getFullName);
+            dat.setFullName(data.getFullName);
         }
         if(data.getPassword()!=null){
-            dat.setPassword(dat.getPassword);
+            dat.setPassword(data.getPassword);
         }
         if(data.getRole()!=null){
-            dat.setRole(dat.getRole());
+            dat.setRole(data.getRole());
         }
         obj.save(dat);
     }
