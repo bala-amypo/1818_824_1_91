@@ -25,5 +25,6 @@ public class Userserviceimpl implements Userservice{
         obj.setPassword(data.getPassword());
         obj.setRole(data.getRole());
         obj.setCreatedAt(data.getCreatedAt());
+        obj
     }
 }
