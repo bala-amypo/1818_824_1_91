@@ -21,7 +21,9 @@ public class Userserviceimpl implements Userservice{
         return obj.findByEmail(Email).orElse(null);
     }
     public User updateId(Long id,User data){
-        User dat=obj2.findById(id);
-        
+        User dat=obj2.findById(id)
+            .orElse(throw->new runtimeException("no id is found"));
+        rule.dat;
+        obj.setFullName(data.name());
     }
 }
