@@ -18,4 +18,7 @@ public class Userserviceimpl implements Userservice{
     public User findByEmail(String  Email){
         return obj.findByEmail(Email).orElse(null);
     }
+    public User updateId(Long id,User data){
+        User dat=
+    }
 }

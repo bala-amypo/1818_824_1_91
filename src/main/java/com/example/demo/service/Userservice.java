@@ -4,4 +4,5 @@ public interface Userservice{
     public User register(User user);
     public User getUser(Long id);
     public User findByEmail(String  Email);
+    public User updateById(Long id,User data);
 }
