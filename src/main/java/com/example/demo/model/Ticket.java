@@ -55,7 +55,7 @@ public class Ticket{
     public Category getAssignedcategory(){
         return assignedCategory;
     }
-    public void setAssignedCtaegory(Category assignedCategory){
+    public void setAssignedCategory(Category assignedCategory){
         this.assignedCategory=assignedCategory;
     }
     public String getUrgencyLevel(){
