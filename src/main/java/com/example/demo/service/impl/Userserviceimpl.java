@@ -22,6 +22,8 @@ public class Userserviceimpl implements Userservice{
             .orElse(throw->new runtimeException("no id is found"));
         obj.setFullName(data.getName());
         obj.setEmail(data.getEmail());
-        obj.setPassword(data.getPassword())
+        obj.setPassword(data.getPassword());
+        obj.setRole(data.getRole());
+        obj.setCreatedAt(data.getCreatedAt());
     }
 }
