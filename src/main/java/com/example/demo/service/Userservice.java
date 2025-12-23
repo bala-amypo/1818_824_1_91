@@ -6,4 +6,5 @@ public interface Userservice{
     public User findByEmail(String  Email);
     public User updateById(Long id,User data);
     public User UpateMin(Long id,User data);
+    public User deleteUser(Abi);
 }
