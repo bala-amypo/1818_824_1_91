@@ -26,5 +26,8 @@ public class UserController{
     public User FindByEmail(@PathVariable String  email){
         return obj.findByEmail(email);
     }
-    
+    @PutMapping("/updata/{id}")
+    public User UpdateById(@PathVariable id,@RequestBody data){
+        return obj.update
+    }
 }
