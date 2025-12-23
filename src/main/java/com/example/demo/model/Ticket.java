@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.PrePersist;
 import java.time.LocalDateTime;
+import java.util.List;
 @Entity
 public class Ticket{
     @Id
@@ -19,7 +20,7 @@ public class Ticket{
     private LocalDateTime createdAt;
     @ManyToOne
     @JoinColumn(name="category_id",nullable=true)
-    private Category assignedCategory;
+    private List<Category> assignedCategory;
     private String urgencyLevel;
     @PrePersist
     void ch(){
