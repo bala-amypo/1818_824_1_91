@@ -41,6 +41,6 @@ public class Userserviceimpl implements Userservice{
         if(data.getRole()!=null){
             dat.setRole(data.getRole());
         }
-        obj.save(dat);
+       return obj.save(dat);
     }
 }
