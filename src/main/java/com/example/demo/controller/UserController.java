@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.wen.bind
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping; 
 @RequestMapping("/users")
@@ -36,4 +37,5 @@ public class UserController{
         public User updatemin(@PathVariable Long id,@RequestBody User data){
             return obj.UpateMin(id,data);
         }
+    
 }
