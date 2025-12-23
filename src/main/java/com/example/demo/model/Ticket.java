@@ -52,7 +52,7 @@ public class Ticket{
     public void setCreatedBy(String createdBy){
         this.createdBy=createdBy;
     }
-    public Category getAssignedcategory(){
+    public Category getAssignedCategory(){
         return assignedCategory;
     }
     public void setAssignedCategory(Category assignedCategory){
