@@ -26,4 +26,5 @@ public class UserController{
     public User FindByEmail(@PathVariable String  email){
         return obj.findByEmail(email);
     }
+    
 }
