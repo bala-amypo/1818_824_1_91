@@ -43,7 +43,7 @@ public class Userserviceimpl implements Userservice{
         }
        return obj.save(dat);
     }
-    public User deleteUser(Abi){
+    public User deleteUser(String Abi){
         User dat=obj.getByName(Abi);
     }
 }
