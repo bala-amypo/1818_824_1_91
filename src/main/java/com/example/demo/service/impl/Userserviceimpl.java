@@ -5,7 +5,7 @@ import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.http.ResponseEntity;
-import org.springframework.trasaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 @Service
 public class Userserviceimpl implements Userservice{
     @Autowired
