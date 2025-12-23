@@ -26,4 +26,9 @@ public class Userserviceimpl implements Userservice{
         dat.setRole(data.getRole());
         return obj.save(dat);
     }
+    public User UpateMin(Long id,User data){
+        User dat=obj.findById(data)
+            .
+        if(data.setEmail()!=)
+    }
 }

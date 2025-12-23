@@ -33,6 +33,8 @@ public class UserController{
         return obj.updateById(id,data);
     }
     @PatchMapping("/updatemin/{id}"){
-        public User up
+        public User updatemin(@PathVariable Long id,@RequestBody User data){
+            return obj.UpateMin(id,data);
+        }
     }
 }

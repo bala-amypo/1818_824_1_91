@@ -5,4 +5,5 @@ public interface Userservice{
     public User getUser(Long id);
     public User findByEmail(String  Email);
     public User updateById(Long id,User data);
+    public User UpateMin(Long id,User data);
 }
