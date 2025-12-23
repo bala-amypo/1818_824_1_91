@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PatchMapping;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping; 
 @RequestMapping("/users")
@@ -30,5 +31,8 @@ public class UserController{
     @PutMapping("/update/{id}")
     public User UpdateById(@PathVariable Long id,@RequestBody User data){
         return obj.updateById(id,data);
+    }
+    @PatchMapping("/updatemin/{id}"){
+        public User up
     }
 }
