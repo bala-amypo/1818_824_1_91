@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 import com.example.demo.service.Userservice;
-import com.example.demo.repository.Userrepo;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class Userserviceimpl implements Userservice{
     @Autowired
-    Userrepo obj;
+    UserRepository obj;
     public User register(User user){
         return obj.save(user);
     }
