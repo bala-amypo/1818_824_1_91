@@ -31,10 +31,13 @@ public class Category{
         }
     }
     @ManyToOne(cascade=CascadeType.ALL)
-    JoinColumn(mappedBy="category_id",nullable=true);
-    private Ticket assignedCtaegory;
+    @JoinColumn(mappedBy="category_id",nullable=true);
+    private Ticket assignedCategory;
     public Ticket getAssignedCategory(){
-        return assigned
+        return assignedCategory;
+    }
+    public void setAssignedCategory(Ticket assignedCategory){
+        this.assignedCategory=assignedCategory;
     }
     public Long getId(){
         return id;
