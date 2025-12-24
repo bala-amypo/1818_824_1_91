@@ -19,7 +19,7 @@ public class Ticket{
     private String createdBy;
     private LocalDateTime createdAt;
     @ManyToOne
-    @JoinColumn(name="category_id",nullable=true)
+    @JoinColumn(name="category_id",nullable=false)
     private Category assignedCategory;
     private String urgencyLevel;
     @PrePersist
