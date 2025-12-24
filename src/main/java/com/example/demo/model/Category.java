@@ -31,7 +31,7 @@ public class Category{
         }
     }
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(mappedBy="category_id",nullable=true);
+    @JoinColumn(mappedBy="category_id",nullable=true)
     private Ticket assignedCategory;
     public Ticket getAssignedCategory(){
         return assignedCategory;
