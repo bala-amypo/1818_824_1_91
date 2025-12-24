@@ -4,7 +4,7 @@ import com.example.demo.service.CategorizationRuleservice;
 import com.example.demo.repository.CategorizationRuleRepository;
 import com.example.demo.model.CategorizationRule;
 import com.example.demo.model.Category;
-import com.example.demo.repository.Categoryrepo;
+import com.example.demo.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ class CategorizatrionRulesServiceimpl implements CategorizationRuleservice{
     @Autowired
     CategorizationRuleRepository obj;
     @Autowired
-    Categoryrepo ob;
+    CategoryRepository ob;
     public CategorizationRule createRule(Long categoryId,CategorizationRule rule){
         Category category=ob.findById(categoryId)
             .orElseThrow(()->new RuntimeException("No Id Found"));
