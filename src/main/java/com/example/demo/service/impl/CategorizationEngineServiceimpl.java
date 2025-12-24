@@ -3,7 +3,7 @@ package com.example.demo.service.impl;
 import com.example.demo.service.CategorizationEngineService;
 import com.example.demo.model.Ticket;
 import com.example.demo.model.CategorizationLog;
-import com.example.demo.repository.Ticketrepo;
+import com.example.demo.repository.TicketRepository;
 import com.example.demo.repository.CategorizationLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class  CategorizationEngineServiceimpl implements CategorizationEngineSer
     @Autowired
     CategorizationLogRepository obj1;
     @Autowired
-    Ticketrepo obj2; 
+    TicketRepository obj2; 
     public Ticket categorizeTicket(Long ticketid){
         return obj2.findById(ticketid).orElseThrow(()->new RuntimeException("No Id Found"));
 
