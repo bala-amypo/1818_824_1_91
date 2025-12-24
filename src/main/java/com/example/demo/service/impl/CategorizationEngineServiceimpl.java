@@ -4,7 +4,7 @@ import com.example.demo.service.CategorizationEngineService;
 import com.example.demo.model.Ticket;
 import com.example.demo.model.CategorizationLog;
 import com.example.demo.repository.Ticketrepo;
-import com.example.demo.repository.CategorizationLogrepo;
+import com.example.demo.repository.CategorizationLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class  CategorizationEngineServiceimpl implements CategorizationEngineService{
     @Autowired
-    CategorizationLogrepo obj1;
+    CategorizationLogRepository obj1;
     @Autowired
     Ticketrepo obj2; 
     public Ticket categorizeTicket(Long ticketid){
