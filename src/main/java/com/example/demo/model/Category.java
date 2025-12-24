@@ -10,6 +10,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
 import com.example.demo.model.Ticket;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
 @Entity
 public class Category{
     @Id
@@ -31,6 +33,9 @@ public class Category{
     @ManyToOne(cascade=CascadeType.ALL)
     JoinColumn(mappedBy="category_id",nullable=true);
     private Ticket assignedCtaegory;
+    public Ticket getAssignedCategory(){
+        return assigned
+    }
     public Long getId(){
         return id;
     }
