@@ -27,6 +27,8 @@ public class Category{
             createdAt=LocalDateTime.now();
         }
     }
+    @ManyToOne
+    mappedBy(name="assignedCategory",Cascade=CascadeType.ALL);
     public Long getId(){
         return id;
     }
