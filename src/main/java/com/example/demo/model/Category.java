@@ -9,6 +9,7 @@ import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
+import com.example.demo.model.Ticket;
 @Entity
 public class Category{
     @Id
@@ -27,8 +28,9 @@ public class Category{
             createdAt=LocalDateTime.now();
         }
     }
-    @ManyToOne
-    mappedBy(name="assignedCategory",Cascade=CascadeType.ALL);
+    @ManyToOne(cascade=CascadeType.ALL)
+    JoinColumn(mappedBy="category_id",nullable=true);
+    private Ticket assignedCtaegory;
     public Long getId(){
         return id;
     }
