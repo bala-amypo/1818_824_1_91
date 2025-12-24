@@ -1,13 +1,13 @@
 package com.example.demo.service.impl;
 import com.example.demo.service.Userservice;
-import com.example.demo.repository.Userrepo;
+import com.example.demo.repository.UrgencyPolicyRepository;
 import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 @Service
-public class Userserviceimpl implements Userservice{
+public class UrgencyPolicyRepository implements Userservice{
     @Autowired
     Userrepo obj;
     public User register(User user){
