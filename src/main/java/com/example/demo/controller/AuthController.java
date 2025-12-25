@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.http.ResponseEntity;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping; 
-@RequestMapping("/users")
+@RequestMapping("/auth")
 @RestController
 public class AuthController{
     @Autowired
     UserService obj;
-    @PostMapping("/Reg")
+    @PostMapping("/register")
     public User Register(@RequestBody User user){
         return obj.register(user);
     }

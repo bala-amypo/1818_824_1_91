@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/tickets")
+@RequestMapping("/api/tickets")
 @RestController
 public class TicketController{
     @Autowired
     TicketService obj;
-    @PostMapping("/ticket")
+    @PostMapping("/")
     public Ticket create(@RequestBody Ticket ti){
         return obj.createTicket(ti);
     }
-    @GetMapping("/top")
+    @GetMapping("/")
     public List<Ticket> getall(){
         return obj.getAllTicket();
     }
