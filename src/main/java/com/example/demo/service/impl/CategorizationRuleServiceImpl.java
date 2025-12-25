@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 import java.util.List;
-import com.example.demo.service.CategorizationRuleservice;
+import com.example.demo.service.CategorizationRuleService;
 import com.example.demo.repository.CategorizationRuleRepository;
 import com.example.demo.model.CategorizationRule;
 import com.example.demo.model.Category;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service 
-class CategorizatrionRulesServiceimpl implements CategorizationRuleservice{
+class CategorizatrionRulesServiceImpl implements CategorizationRuleService{
     @Autowired
     CategorizationRuleRepository obj;
     @Autowired
