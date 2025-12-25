@@ -1,5 +1,5 @@
 package com.example.demo.service.impl;
-import com.example.demo.service.Userservice;
+import com.example.demo.service.UserService;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 import com.example.demo.model.UrgencyPolicy;
-import com.example.demo.service.UrgencyPolicyservice;
+import com.example.demo.service.UrgencyPolicyService;
 import com.example.demo.repository.UrgencyPolicyRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
