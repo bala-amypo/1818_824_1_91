@@ -2,12 +2,13 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.crypto.bcryt.BcryptPasswordEncoder;
+import org.springframework.crypto.bcrypt.BcryptPasswordEncoder;
 @SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+		Systemt.out.println(BcryptPasswordEncoder().encode("123456"));
 	}
 
 }
