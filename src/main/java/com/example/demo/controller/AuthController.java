@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuthController{
     @Autowired
     UserService obj;
-    @PostMapping("/register")
+    @PostMapping("/Register")
     public User Register(@RequestBody User user){
         return obj.register(user);
     }
@@ -30,17 +30,17 @@ public class AuthController{
     public User FindByEmail(@PathVariable String  email){
         return obj.findByEmail(email);
     }
-    @PutMapping("/update/{id}")
-    public User UpdateById(@PathVariable Long id,@RequestBody User data){
-        return obj.updateById(id,data);
-    }
-    @PatchMapping("/updatemin/{id}")
-        public User updatemin(@PathVariable Long id,@RequestBody User data){
-            return obj.UpateMin(id,data);
-        }
-    @DeleteMapping("/delete/{Abi}")
-    public ResponseEntity<String> deleteuser(@PathVariable String Abi){
-        obj.deleteUser(Abi);
-        return ResponseEntity.ok("Deletion is Seucessfull");
-    }
+    // @PutMapping("/update/{id}")
+    // public User UpdateById(@PathVariable Long id,@RequestBody User data){
+    //     return obj.updateById(id,data);
+    // }
+    // @PatchMapping("/updatemin/{id}")
+    //     public User updatemin(@PathVariable Long id,@RequestBody User data){
+    //         return obj.UpateMin(id,data);
+    //     }
+    // @DeleteMapping("/delete/{Abi}")
+    // public ResponseEntity<String> deleteuser(@PathVariable String Abi){
+    //     obj.deleteUser(Abi);
+    //     return ResponseEntity.ok("Deletion is Seucessfull");
+    // }
 }
