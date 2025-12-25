@@ -1,5 +1,5 @@
 package com.example.demo.controller;
-import com.example.demo.service.CategorizationRuleservice;
+import com.example.demo.service.CategorizationRuleService;
 import com.example.demo.model.CategorizationRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 class CategrizationRuleController{
     @Autowired
-    CategorizationRuleservice obj;
+    CategorizationRuleService obj;
 
     @PostMapping("/categories/{categoryId}/rules")
     CategorizationRule CreateRule(@PathVariable Long categoryId,@RequestBody CategorizationRule rule){
