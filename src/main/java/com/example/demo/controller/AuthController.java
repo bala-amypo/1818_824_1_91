@@ -15,7 +15,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping; 
 @RequestMapping("/users")
 @RestController
-public class UserController{
+public class AuthController{
     @Autowired
     Userservice obj;
     @PostMapping("/Reg")
