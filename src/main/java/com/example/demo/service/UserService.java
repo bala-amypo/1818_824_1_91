@@ -1,11 +1,9 @@
 package com.example.demo.service;
+
 import com.example.demo.model.User;
-import org.springframework.http.ResponseEntity;
-public interface UserService{
-    public User register(User user);
-    public User getUser(Long id);
-    public User findByEmail(String  Email);
-    public User updateById(Long id,User data);
-    public User UpateMin(Long id,User data);
-    public void deleteUser(String Abi);
+
+public interface UserService {
+    User register(User user);
+    User getUser(Long id);
+    User findByEmail(String email);
 }
