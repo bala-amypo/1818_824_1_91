@@ -1,9 +1,15 @@
 package com.example.demo.service;
+
 import java.util.List;
-import com.example.demo.model.Ticket;
+
 import com.example.demo.model.CategorizationLog;
-public interface CategorizationEngineService{
-    Ticket categorizeTicket(Long ticketid);
-    List<CategorizationLog> getLogsForTicket(Long ticketid);
+import com.example.demo.model.Ticket;
+
+public interface CategorizationEngineService {
+
+    Ticket categorizeTicket(Long ticketId);
+
+    List<CategorizationLog> getLogsForTicket(Long ticketId);
+
     CategorizationLog getLog(Long id);
 }
