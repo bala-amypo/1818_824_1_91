@@ -1,78 +1,58 @@
 package com.example.demo.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Min;
+
 import java.time.LocalDateTime;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
-import com.example.demo.model.Category;
+
+import jakarta.persistence.*;
+
 @Entity
-public class CategorizationRule{
+@Table(name = "categorization_rules")
+public class CategorizationRule {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
-    @JoinColumn(name="category_id")
-    private Category category;
-    @NotNull(message="This Feild is Recquired")
+
     private String keyword;
     private String matchType;
-    @Min(0)
-    private int priority;
+    private Integer priority;
+
     private LocalDateTime createdAt;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    public CategorizationRule() {}
+
+    public CategorizationRule(String keyword, String matchType, Integer priority) {
+        this.keyword = keyword;
+        this.matchType = matchType;
+        this.priority = priority;
+    }
+
     @PrePersist
-    public void onCreate(){
-        if(createdAt==null){
-            createdAt=LocalDateTime.now();
+    public void prePersist() {
+        this.createdAt = LocalDateTime.now();
+        if (this.priority == null) {
+            this.priority = 1;
         }
     }
-    public Long getId(){
-        return id;
-    }
-    public void setId(Long id){
-        this.id=id;
-    }
-    public void setCategory(Category category){
-        this.category=category;
-        }
-    public Category getCategory(){
-        return category;
-    }
-    public void setKeyword(String keyword){
-        this.keyword=keyword;
-    }
-    public String getKeyword(){
-        return keyword;
-    }
-    public void setMatchType(String matchType){
-        this.matchType=matchType;
-    }
-    public String getMatchType(){
-        return matchType;
-    }  
-    public void setPriority(int priority){
-        this.priority=priority;
-    }
-    public int getPriority(){
-        return priority;
-    }
-    public void setCreatedAt(LocalDateTime createdAt){
-    this.createdAt=createdAt;
-}
-    public LocalDateTime getCreatedAt(){
-        return createdAt;
-}
-public CategorizationRule(Long id,Category category,String keyword,String matchType,int priority,LocalDateTime createdAt){
-this.id=id;
-this.category=category;
-this.keyword=keyword;
-this.matchType=matchType;
-this.priority=priority;
-this.createdAt=createdAt;
-}
-public CategorizationRule(){}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getKeyword() { return keyword; }
+    public void setKeyword(String keyword) { this.keyword = keyword; }
+
+    public String getMatchType() { return matchType; }
+    public void setMatchType(String matchType) { this.matchType = matchType; }
+
+    public Integer getPriority() { return priority; }
+    public void setPriority(Integer priority) { this.priority = priority; }
+
+    public Category getCategory() { return category; }
+    public void setCategory(Category category) { this.category = category; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
