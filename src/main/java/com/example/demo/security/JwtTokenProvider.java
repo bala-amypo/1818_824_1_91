@@ -13,12 +13,15 @@ import io.jsonwebtoken.security.Keys;
 import javax.crypto.SecretKey;
 
 @Component
-public class JwtTokenProvider{
+public class JwtTokenProvider {
 
-    private static final String SECRET ="my-secret-key-12345678901234567890";
+    private static final String SECRET =
+            "my-secret-key-12345678901234567890";
     private static final long VALIDITY =
+            3600000; // 1 hour
 
-    private final SecretKey key = Keys.hmacShaKeyFor(SECRET.getBytes());
+    private final SecretKey key =
+            Keys.hmacShaKeyFor(SECRET.getBytes());
 
     public String generateToken(Map<String, Object> claims, String subject) {
 
