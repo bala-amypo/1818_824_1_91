@@ -1,21 +1,36 @@
 package com.example.demo.service.impl;
-import org.springframework.stereotype.Service;
-import com.example.demo.model.Ticket;
-import com.example.demo.service.TicketService;
-import com.example.demo.repository.TicketRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.exception.ResourceNotFoundException;
+import com.example.demo.model.Ticket;
+import com.example.demo.repository.TicketRepository;
+import com.example.demo.service.TicketService;
+
 @Service
-public class TicketServiceImpl implements TicketService{
-@Autowired
-TicketRepository obj;
-    public Ticket createTicket(Ticket Ticket){
-        return obj.save(Ticket);
+public class TicketServiceImpl implements TicketService {
+
+    private final TicketRepository ticketRepository;
+
+    public TicketServiceImpl(TicketRepository ticketRepository) {
+        this.ticketRepository = ticketRepository;
     }
-    public Ticket getTicket(Long id){
-        return obj.findById(id).orElse(null);
+
+    @Override
+    public Ticket createTicket(Ticket ticket) {
+        return ticketRepository.save(ticket);
     }
-    public List<Ticket> getAllTicket(){
-        return obj.findAll();
+
+    @Override
+    public Ticket getTicket(Long id) {
+        return ticketRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Ticket not found"));
+    }
+
+    @Override
+    public List<Ticket> getAllTickets() {
+        return ticketRepository.findAll();
     }
 }

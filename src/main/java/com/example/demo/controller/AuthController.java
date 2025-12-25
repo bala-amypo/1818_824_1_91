@@ -1,46 +1,94 @@
 package com.example.demo.controller;
-import com.example.demo.model.User;
-import com.example.demo.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.http.ResponseEntity;
-import java.util.List;
-import org.springframework.web.bind.annotation.RequestMapping; 
-@RequestMapping("/auth")
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.dto.AuthRequest;
+import com.example.demo.dto.AuthResponse;
+import com.example.demo.model.User;
+import com.example.demo.security.JwtTokenProvider;
+import com.example.demo.service.UserService;
+
 @RestController
-public class AuthController{
-    @Autowired
-    UserService obj;
+@RequestMapping("/auth")
+public class AuthController {
+    private final UserService userService;
+    private final AuthenticationManager authenticationManager;
+    private final UserDetailsService userDetailsService;
+    private final JwtTokenProvider jwtTokenProvider;
+
+    public AuthController(UserService userService,
+                          AuthenticationManager authenticationManager,
+                          UserDetailsService userDetailsService,
+                          JwtTokenProvider jwtTokenProvider) {
+        this.userService = userService;
+        this.authenticationManager = authenticationManager;
+        this.userDetailsService = userDetailsService;
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
+
     @PostMapping("/register")
-    public User Register(@RequestBody User user){
-        return obj.register(user);
+    public ResponseEntity<AuthResponse> register(@RequestBody User user) {
+        User savedUser = userService.register(user);
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("role", savedUser.getRole());
+
+        String token = jwtTokenProvider.generateToken(
+                claims,
+                savedUser.getEmail()
+        );
+
+        return ResponseEntity.ok(
+                new AuthResponse(
+                        token,
+                        savedUser.getId(),
+                        savedUser.getEmail(),
+                        savedUser.getRole()
+                )
+        );
     }
-    @GetMapping("{id}")
-    public User GetUser(@PathVariable Long id){
-        return obj.getUser(id);
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(
+            @RequestBody AuthRequest request) {
+
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        request.getEmail(),
+                        request.getPassword()
+                )
+        );
+
+        UserDetails userDetails =
+                userDetailsService.loadUserByUsername(
+                        request.getEmail()
+                );
+
+        User user =
+                userService.findByEmail(request.getEmail());
+
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("role", user.getRole());
+
+        String token = jwtTokenProvider.generateToken(
+                claims,
+                userDetails.getUsername()
+        );
+
+        return ResponseEntity.ok(
+                new AuthResponse(
+                        token,
+                        user.getId(),
+                        user.getEmail(),
+                        user.getRole()
+                )
+        );
     }
-    @GetMapping("/email/{email}")
-    public User FindByEmail(@PathVariable String  email){
-        return obj.findByEmail(email);
-    }
-    // @PutMapping("/update/{id}")
-    // public User UpdateById(@PathVariable Long id,@RequestBody User data){
-    //     return obj.updateById(id,data);
-    // }
-    // @PatchMapping("/updatemin/{id}")
-    //     public User updatemin(@PathVariable Long id,@RequestBody User data){
-    //         return obj.UpateMin(id,data);
-    //     }
-    // @DeleteMapping("/delete/{Abi}")
-    // public ResponseEntity<String> deleteuser(@PathVariable String Abi){
-    //     obj.deleteUser(Abi);
-    //     return ResponseEntity.ok("Deletion is Seucessfull");
-    // }
 }
