@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuthController{
     @Autowired
     UserService obj;
-    @PostMapping("/Register")
+    @PostMapping("/register")
     public User Register(@RequestBody User user){
         return obj.register(user);
     }
