@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 @Service
-public class Userserviceimpl implements Userservice{
+public class UserserviceImpl implements Userservice{
     @Autowired
     UserRepository obj;
     public User register(User user){
