@@ -32,8 +32,10 @@ public class Ticket {
     @OneToMany(mappedBy = "ticket")
     private List<CategorizationLog> logs;
 
+    // ✅ No-args constructor
     public Ticket() {}
 
+    // ✅ Parameterized constructor
     public Ticket(String title, String description, String location, String createdBy) {
         this.title = title;
         this.description = description;
@@ -49,33 +51,85 @@ public class Ticket {
         }
     }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    // ===== GETTERS & SETTERS =====
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getCreatedBy() { return createdBy; }
-    public void setCreatedBy(String createdBy) { this.createdBy = createdBy; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public String getUrgencyLevel() { return urgencyLevel; }
-    public void setUrgencyLevel(String urgencyLevel) { this.urgencyLevel = urgencyLevel; }
+    public String getDescription() {
+        return description;
+    }
 
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-    public Category getAssignedCategory() { return assignedCategory; }
-    public void setAssignedCategory(Category assignedCategory) { this.assignedCategory = assignedCategory; }
+    public String getLocation() {
+        return location;
+    }
 
-    public User getUser() { return user; }
-    public void setUser(User user) { this.user = user; }
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
-    public List<CategorizationLog> getLogs() { return logs; }
-    public void setLogs(List<CategorizationLog> logs) { this.logs = logs; }
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getUrgencyLevel() {
+        return urgencyLevel;
+    }
+
+    public void setUrgencyLevel(String urgencyLevel) {
+        this.urgencyLevel = urgencyLevel;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Category getAssignedCategory() {
+        return assignedCategory;
+    }
+
+    public void setAssignedCategory(Category assignedCategory) {
+        this.assignedCategory = assignedCategory;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<CategorizationLog> getLogs() {
+        return logs;
+    }
+
+    public void setLogs(List<CategorizationLog> logs) {
+        this.logs = logs;
+    }
 }

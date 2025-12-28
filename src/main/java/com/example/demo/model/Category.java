@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -25,15 +27,13 @@ public class Category {
     private LocalDateTime createdAt;
 
     @ManyToMany
-    @JoinTable(
-        name = "category_urgency_policy",
-        joinColumns = @JoinColumn(name = "category_id"),
-        inverseJoinColumns = @JoinColumn(name = "policy_id")
-    )
+    @JsonIgnore
     private Set<UrgencyPolicy> urgencyPolicies = new HashSet<>();
 
+    // ✅ No-args constructor
     public Category() {}
 
+    // ✅ Parameterized constructor
     public Category(String categoryName, String defaultUrgency) {
         this.categoryName = categoryName;
         this.defaultUrgency = defaultUrgency;
@@ -43,25 +43,39 @@ public class Category {
     public void prePersist() {
         this.createdAt = LocalDateTime.now();
     }
-    public void addUrgencyPolicy(UrgencyPolicy policy) {
-        this.urgencyPolicies.add(policy);
-        policy.getCategories().add(this);
-    }
+
+    // ===== GETTERS & SETTERS =====
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCategoryName() {
         return categoryName;
     }
 
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getDefaultUrgency() {
         return defaultUrgency;
+    }
+
+    public void setDefaultUrgency(String defaultUrgency) {
+        this.defaultUrgency = defaultUrgency;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -70,22 +84,5 @@ public class Category {
 
     public Set<UrgencyPolicy> getUrgencyPolicies() {
         return urgencyPolicies;
-    }
-
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setDefaultUrgency(String defaultUrgency) {
-        this.defaultUrgency = defaultUrgency;
     }
 }
