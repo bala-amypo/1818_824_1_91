@@ -19,6 +19,7 @@ import com.example.demo.service.UserService;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
+
     private final UserService userService;
     private final AuthenticationManager authenticationManager;
     private final UserDetailsService userDetailsService;
@@ -36,7 +37,9 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody User user) {
+
         User savedUser = userService.register(user);
+
         Map<String, Object> claims = new HashMap<>();
         claims.put("role", savedUser.getRole());
 
