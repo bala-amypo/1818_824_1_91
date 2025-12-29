@@ -21,16 +21,13 @@ public class UrgencyPolicy {
 
     private LocalDateTime createdAt;
 
-    // 🔥 MUST be initialized (this fixes BOTH failed tests)
     @ManyToMany(mappedBy = "urgencyPolicies")
     @JsonIgnore
     private Set<Category> categories = new HashSet<>();
 
-    // ✅ No-args constructor
     public UrgencyPolicy() {
     }
 
-    // ✅ Parameterized constructor
     public UrgencyPolicy(String policyName, String keyword, String urgencyOverride) {
         this.policyName = policyName;
         this.keyword = keyword;

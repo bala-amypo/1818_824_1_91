@@ -22,17 +22,15 @@ public class CategorizationLog {
 
     @ManyToOne
     @JoinColumn(name = "ticket_id")
-    @JsonIgnore   // 🔥 prevents infinite recursion
+    @JsonIgnore   
     private Ticket ticket;
 
     @ManyToOne
     @JoinColumn(name = "rule_id")
     private CategorizationRule appliedRule;
 
-    // ✅ No-args constructor
     public CategorizationLog() {}
 
-    // ✅ All-args constructor
     public CategorizationLog(Ticket ticket,
                              CategorizationRule appliedRule,
                              String matchedKeyword,
@@ -49,8 +47,6 @@ public class CategorizationLog {
     public void prePersist() {
         this.loggedAt = LocalDateTime.now();
     }
-
-    // ===== GETTERS & SETTERS =====
 
     public Long getId() {
         return id;
